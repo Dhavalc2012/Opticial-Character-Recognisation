@@ -235,6 +235,6 @@ public class SimpleAndroidOCRActivity extends Activity {
         // Cycle done.
     }
 
-    // www.Gaut.am was here
+
     // Thanks for reading!
 }
