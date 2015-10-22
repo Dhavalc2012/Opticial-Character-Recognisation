@@ -746,7 +746,7 @@ PIX       *pix1, *pix2;
  *
  *  Notes:
  *      (1) This maximizes the correlation score between two 1 bpp images,
- *          one of which is typically wider.  In a typical example,
+ *          one of which is typically wider.  In a typical DC,
  *          pix1 is a bitmap of 2 or more touching characters and pix2 is
  *          a single character template.  This finds the location of pix2
  *          that gives the largest correlation.

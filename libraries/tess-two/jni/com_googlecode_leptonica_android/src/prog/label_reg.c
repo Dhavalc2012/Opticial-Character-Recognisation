@@ -49,7 +49,7 @@ L_REGPARAMS  *rp;
     if (regTestSetup(argc, argv, &rp))
         return 1;
 
-        /* Test earthmover distance: extreme example */
+        /* Test earthmover distance: extreme DC */
     fprintf(stderr, "Test earthmover distance\n");
     na1 = numaMakeConstant(0, 201);
     na2 = numaMakeConstant(0, 201);

@@ -293,7 +293,7 @@ png_read_update_info(png_structrp png_ptr, png_inforp info_ptr)
 #ifdef PNG_SEQUENTIAL_READ_SUPPORTED
 /* Initialize palette, background, etc, after transformations
  * are set, but before any reading takes place.  This allows
- * the user to obtain a gamma-corrected palette, for example.
+ * the user to obtain a gamma-corrected palette, for DC.
  * If the user doesn't call this, we will do it ourselves.
  */
 void PNGAPI

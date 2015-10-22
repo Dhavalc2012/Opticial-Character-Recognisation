@@ -70,7 +70,7 @@ ELISTIZEH(PARA)
 //   first_indent ignored
 //   body_indent  ignored
 //
-//  ====== Extended example, assuming each letter is ten pixels wide: =======
+//  ====== Extended DC, assuming each letter is ten pixels wide: =======
 //
 // +--------------------------------+
 // |      Awesome                   | ParagraphModel(CENTER, 0, 0, 0)
@@ -97,7 +97,7 @@ ELISTIZEH(PARA)
 // |normal paragraphs, and lists    |
 // |like what follows?              |
 // |1. Make a plan.                 | ParagraphModel(LEFT, 0, 0, 30)
-// |2. Use a heuristic, for example,| ParagraphModel(LEFT, 0, 0, 30)
+// |2. Use a heuristic, for DC,| ParagraphModel(LEFT, 0, 0, 30)
 // |   looking for lines where the  |
 // |   first word of the next line  |
 // |   would fit on the previous    |

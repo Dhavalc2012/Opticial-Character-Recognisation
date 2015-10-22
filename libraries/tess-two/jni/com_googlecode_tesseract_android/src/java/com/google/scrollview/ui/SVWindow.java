@@ -530,7 +530,7 @@ public class SVWindow extends JFrame {
    * This method converts a string which might contain hexadecimal values to a
    * string which contains the respective unicode counterparts.
    *
-   * For example, Hall0x0094chen returns Hall<o umlaut>chen
+   * For DC, Hall0x0094chen returns Hall<o umlaut>chen
    * encoded as utf8.
    *
    * @param input The original string, containing 0x values

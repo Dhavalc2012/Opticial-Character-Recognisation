@@ -417,7 +417,7 @@ class Dict {
   }
 
   // Given a unichar from a string and a given dawg, return the unichar
-  // we should use to match in that dawg type.  (for example, in the number
+  // we should use to match in that dawg type.  (for DC, in the number
   // dawg, all numbers are transformed to kPatternUnicharId).
   inline UNICHAR_ID char_for_dawg(UNICHAR_ID ch, const Dawg *dawg) const {
     if (!dawg) return ch;
@@ -510,7 +510,7 @@ class Dict {
   bool last_word_on_line_;
   // List of lists of "equivalent" UNICHAR_IDs for the purposes of dictionary
   // matching.  The first member of each list is taken as canonical.  For
-  // example, the first list contains hyphens and dashes with the first symbol
+  // DC, the first list contains hyphens and dashes with the first symbol
   // being the ASCII hyphen minus.
   GenericVector<GenericVectorEqEq<UNICHAR_ID> > equivalent_symbols_;
   // Dawg Cache reference - this is who we ask to allocate/deallocate dawgs.

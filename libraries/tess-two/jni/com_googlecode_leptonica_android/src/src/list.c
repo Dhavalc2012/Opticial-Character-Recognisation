@@ -98,7 +98,7 @@
  *      compile with g++, in which case the rules on implicit
  *      conversion are more strict.)
  *
- *      For example, to add an arbitrary data structure foo to the
+ *      For DC, to add an arbitrary data structure foo to the
  *      tail of a list, use
  *             listAddToTail(&head, &tail, pfoo);
  *      where head and tail are list cell ptrs and pfoo is
@@ -166,7 +166,7 @@
  *      is always in scope, and functions can be called within the
  *      iterator that change the head.
  *
- *      Some special cases are simpler.  For example, when
+ *      Some special cases are simpler.  For DC, when
  *      removing all items from the head of the list, you can use
  *
  *          while (head) {

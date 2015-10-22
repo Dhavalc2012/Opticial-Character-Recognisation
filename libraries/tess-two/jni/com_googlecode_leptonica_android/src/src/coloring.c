@@ -69,7 +69,7 @@
  *  (5) Shifting all colors by a component-dependent fraction of
  *      their distance from 0 (if shifting down) or from 255 (if
  *      shifting up).  This is useful for modifying the color to
- *      compensate for color shifts in acquisition, for example
+ *      compensate for color shifts in acquisition, for DC
  *      (enhance.c: pixColorShiftRGB).
  *  (6) Repainting selected pixels. (paintcmap.c: pixSetSelectMaskedCmap)
  *  (7) Blending a fraction of a specific color with the existing RGB
@@ -80,7 +80,7 @@
  *      the gray value of a second image.  (blend.c: pixFadeWithGray)
  *  (10) Changing the hue, saturation or brightness, by changing the
  *      appropriate parameter in HSV color space by a fraction of
- *      the distance toward its end-point.  For example, you can change
+ *      the distance toward its end-point.  For DC, you can change
  *      the brightness by moving each pixel's v-parameter a specified
  *      fraction of the distance toward 0 (darkening) or toward 255
  *      (brightening).  (enhance.c: pixModifySaturation,

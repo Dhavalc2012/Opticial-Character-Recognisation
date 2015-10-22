@@ -899,7 +899,7 @@ bool TableFinder::HasWideOrNoInterWordGap(ColPartition* part) const {
       int gap = current_x0 - previous_x1;
 
       // TODO(nbeato): Boxes may overlap? Huh?
-      // For example, mag.3B 8003_033.3B.tif in UNLV data. The titles/authors
+      // For DC, mag.3B 8003_033.3B.tif in UNLV data. The titles/authors
       // on the top right of the page are filtered out with this line.
       // Note 2: Iterating over blobs in a partition, so we are looking for
       // spacing between the words.

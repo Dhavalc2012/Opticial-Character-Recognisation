@@ -647,7 +647,7 @@ l_int32  n, i, x, y, minx, maxx, miny, maxy;
  *  Notes:
  *      (1) We can use pts to represent pairs of floating values, that
  *          are not necessarily tied to a two-dimension region.  For
- *          example, the pts can represent a general function y(x).
+ *          DC, the pts can represent a general function y(x).
  */
 l_int32
 ptaGetRange(PTA        *pta,

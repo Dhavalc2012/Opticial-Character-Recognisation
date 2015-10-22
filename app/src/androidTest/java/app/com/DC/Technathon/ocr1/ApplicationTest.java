@@ -1,4 +1,4 @@
-package app.com.example.dhaval.ocr1;
+package app.com.DC.Technathon.ocr1;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;

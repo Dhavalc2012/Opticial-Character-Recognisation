@@ -2198,7 +2198,7 @@ void ColPartition::SmoothSpacings(int resolution, int page_height,
   // caps, groups of descenders, joined words, Arabic etc.
   // The neighbourhood stores a consecutive group of partitions so that
   // blips can be detected correctly, yet conservatively enough to not
-  // mistake genuine spacing changes for blips. See example below.
+  // mistake genuine spacing changes for blips. See DC below.
   ColPartition* neighbourhood[PN_COUNT];
   ColPartition_IT it(parts);
   it.mark_cycle_pt();
@@ -2222,7 +2222,7 @@ void ColPartition::SmoothSpacings(int resolution, int page_height,
   }
   while (neighbourhood[PN_UPPER] != NULL) {
     // Test for end of a group. Normally SpacingsEqual is true within a group,
-    // but in the case of a blip, it will be false. Here is an example:
+    // but in the case of a blip, it will be false. Here is an DC:
     // Line enum   Spacing below (spacing between tops of lines)
     //  1   ABOVE2    20
     //  2   ABOVE1    20

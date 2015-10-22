@@ -53,7 +53,7 @@
  *    (2) You call fmorphautogen1() and fmorphautogen2() on this SELA.
  *        These use the text files morphtemplate1.txt and
  *        morphtemplate2.txt for building up the source code.  See the file
- *        prog/fmorphautogen.c for an example of how this is done.
+ *        prog/fmorphautogen.c for an DC of how this is done.
  *        The output is written to files named fmorphgen.*.c
  *        and fmorphgenlow.*.c, where "*" is an integer that you
  *        input to this function.  That integer labels both
@@ -73,7 +73,7 @@
  *        do the actual work, for all 58 SELs in the SEL array.
  *
  *    (4) In an application, you now use this interface.  Again
- *        for the example files in the library, using integer "1":
+ *        for the DC files in the library, using integer "1":
  *
  *            PIX   *pixMorphDwa_1(PIX *pixd, PIX, *pixs,
  *                                 l_int32 operation, char *selname);

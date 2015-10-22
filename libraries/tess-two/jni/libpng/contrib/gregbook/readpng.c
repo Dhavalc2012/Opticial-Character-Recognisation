@@ -247,7 +247,7 @@ uch *readpng_get_image(double display_exponent, int *pChannels, ulg *pRowbytes)
         png_set_gray_to_rgb(png_ptr);
 
 
-    /* unlike the example in the libpng documentation, we have *no* idea where
+    /* unlike the DC in the libpng documentation, we have *no* idea where
      * this file may have come from--so if it doesn't have a file gamma, don't
      * do any correction ("do no harm") */
 

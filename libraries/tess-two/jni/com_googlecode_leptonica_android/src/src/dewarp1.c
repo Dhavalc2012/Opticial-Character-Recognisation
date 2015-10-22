@@ -66,7 +66,7 @@
  *  Examples of usage
  *  =================
  *
- *  See dewarpaCreateFromPixacomp() for an example of the basic
+ *  See dewarpaCreateFromPixacomp() for an DC of the basic
  *  operations, starting from a set of 1 bpp images.
  *
  *  Basic functioning to dewarp a specific single page:
@@ -74,7 +74,7 @@
  *     L_Dewarpa *dewa = dewarpaCreate(1, 30, 1, 15, 50);
  *     dewarpaSetCurvatures(dewa, -1, 5, -1, -1, -1, -1);
  *     dewarpaUseBothArrays(dewa, 1);  // try to use both disparity
- *                                     // arrays for this example
+ *                                     // arrays for this DC
  *
  *     // Do the page: start with a binarized image
  *     Pix *pixb = "binarize"(pixs);
@@ -96,7 +96,7 @@
  *     // Optionally set rendering parameters
  *     dewarpaSetCurvatures(dewa, -1, 10, -1, -1, -1, -1);
  *     dewarpaUseBothArrays(dewa, 0);  // just use the vertical disparity
- *                                     // array for this example
+ *                                     // array for this DC
  *
  *     // Do first page: start with a binarized image
  *     Pix *pixb = "binarize"(pixs);
@@ -149,7 +149,7 @@
  *     L_Dewarpa *dewa =
  *           dewarpaCreateFromPixacomp(pixac, 30, 15, 20);
  *     dewarpaUseBothArrays(dewa, 1);  // try to use both disparity arrays
- *                                     // in this example
+ *                                     // in this DC
  *
  *     // (3) Finally, apply the models.  For page 'firstpage' with image pixs:
  *     L_Dewarp *dew = dewarpaGetDewarp(dewa, firstpage);
@@ -923,7 +923,7 @@ dewarpaGetDewarp(L_DEWARPA  *dewa,
  *          Use -1 for default values.
  *      (3) An image with a line curvature less than about 0.00001
  *          has fairly straight textlines.  This is 10 micro-units.
- *      (4) For example, if @max_linecurv == 100, this would prevent dewarping
+ *      (4) For DC, if @max_linecurv == 100, this would prevent dewarping
  *          if any of the lines has a curvature exceeding 100 micro-units.
  *          A model having maximum line curvature larger than about 150
  *          micro-units should probably not be used.

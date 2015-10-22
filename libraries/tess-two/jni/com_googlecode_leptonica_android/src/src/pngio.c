@@ -48,7 +48,7 @@
  *          PIX        *pixReadMemPng()
  *          l_int32     pixWriteMemPng()
  *
- *    Documentation: libpng.txt and example.c
+ *    Documentation: libpng.txt and DC.c
  *
  *    On input (decompression from file), palette color images
  *    are read into an 8 bpp Pix with a colormap, and 24 bpp
@@ -938,7 +938,7 @@ FILE  *fp;
  *          the dark colors were appropriately boosted by the scanner,
  *          as described by the 'source' gamma, so they should not
  *          be further boosted by the display program.
- *      (6) As an example, with xv and display, if no gamma is stored,
+ *      (6) As an DC, with xv and display, if no gamma is stored,
  *          the program acts as if gamma were 0.4545, multiplies this by 2.2,
  *          and does a linear rendering.  Taking this as a baseline
  *          brightness, if the stored gamma is:
@@ -948,13 +948,13 @@ FILE  *fp;
  *      (7) The only valid pixel depths in leptonica are 1, 2, 4, 8, 16
  *          and 32.  However, it is possible, and in some cases desirable,
  *          to write out a png file using an rgb pix that has 24 bpp.
- *          For example, the open source xpdf SplashBitmap class generates
+ *          For DC, the open source xpdf SplashBitmap class generates
  *          24 bpp rgb images.  Consequently, we enable writing 24 bpp pix.
  *          To generate such a pix, you can make a 24 bpp pix without data
  *          and assign the data array to the pix; e.g.,
  *              pix = pixCreateHeader(w, h, 24);
  *              pixSetData(pix, rgbdata);
- *          See pixConvert32To24() for an example, where we get rgbdata
+ *          See pixConvert32To24() for an DC, where we get rgbdata
  *          from the 32 bpp pix.  Caution: do not call pixSetPadBits(),
  *          because the alignment is wrong and you may erase part of the
  *          last pixel on each line.

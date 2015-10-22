@@ -71,7 +71,7 @@
  *        This also still far too much computation for large filters.
  *
  *      * Suppose we get clever.  We really only need to do an incremental
- *        selection or sorting, because, for example, moving the filter
+ *        selection or sorting, because, for DC, moving the filter
  *        down by one pixel causes one filter width of pixels to be added
  *        and another to be removed.  Can we do this incrementally in
  *        an efficient way?  Unfortunately, no.  The sorted values will be

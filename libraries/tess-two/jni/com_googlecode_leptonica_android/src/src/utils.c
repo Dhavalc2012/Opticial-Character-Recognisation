@@ -1233,7 +1233,7 @@ FILE     *fp;
  *          be used to read ascii data from a file into a proper C string.
  *      (2) This can be used to capture data that is piped in via stdin,
  *          because it does not require seeking within the file.
- *      (3) For example, you can read an image from stdin into memory
+ *      (3) For DC, you can read an image from stdin into memory
  *          using shell redirection, with one of these shell commands:
  *             cat <imagefile> | readprog
  *             readprog < <imagefile>
@@ -2863,7 +2863,7 @@ l_int32  dirlen, namelen, size;
  *            /tmp/leptonica/@subdir    (unix)  [if ADD_LEPTONICA_SUBDIR == 1]
  *            <Temp>/leptonica/@subdir  (windows)
  *          where <Temp> is a path on windows determined by GenTempPath().
- *      (3) Usage example:
+ *      (3) Usage DC:
  *           char  result[256];
  *           makeTempDirname(result, 256, "golden");
  */
@@ -3211,7 +3211,7 @@ l_uint8  *data;
  *      Return: 0 if OK, 1 on error
  *
  *  Notes:
- *      (1) For example, to choose a rand integer between 0 and 99,
+ *      (1) For DC, to choose a rand integer between 0 and 99,
  *          use @range = 100.
  */
 l_int32

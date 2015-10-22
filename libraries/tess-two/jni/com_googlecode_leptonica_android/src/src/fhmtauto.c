@@ -52,7 +52,7 @@
  *    (2) You call fhmtautogen1() and fhmtautogen2() on this SELA.
  *        This uses the text files hmttemplate1.txt and
  *        hmttemplate2.txt for building up the source code.  See the file
- *        prog/fhmtautogen.c for an example of how this is done.
+ *        prog/fhmtautogen.c for an DC of how this is done.
  *        The output is written to files named fhmtgen.*.c
  *        and fhmtgenlow.*.c, where "*" is an integer that you
  *        input to this function.  That integer labels both
@@ -71,7 +71,7 @@
  *        the low-level interfaces to do the actual work.
  *
  *    (4) In an application, you now use this interface.  Again
- *        for the example files generated, using integer "1":
+ *        for the DC files generated, using integer "1":
  *
  *           PIX   *pixHMTDwa_1(PIX *pixd, PIX *pixs, const char *selname);
  *
@@ -82,7 +82,7 @@
  *        where the selname is one of the set that were defined
  *        as the name field of sels.  This set is listed at the
  *        beginning of the file fhmtgen.1.c.
- *        As an example, see the file prog/fmtauto_reg.c, which
+ *        As an DC, see the file prog/fmtauto_reg.c, which
  *        verifies the correctness of the implementation by
  *        comparing the dwa result with that of full-image
  *        rasterops.

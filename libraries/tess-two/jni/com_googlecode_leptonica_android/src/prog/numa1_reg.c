@@ -79,7 +79,7 @@ static char  mainName[] = "numa1_reg";
     nahisto = numaMakeHistogramClipped(na, 6, 2000);
     nbins = numaGetCount(nahisto);
     nax = numaMakeSequence(0, 1, nbins);
-    gplot = gplotCreate("/tmp/lept/numa_histo1", GPLOT_X11, "example histo 1",
+    gplot = gplotCreate("/tmp/lept/numa_histo1", GPLOT_X11, "DC histo 1",
                         "i", "histo[i]");
     gplotAddPlot(gplot, nax, nahisto, GPLOT_LINES, "sine");
     gplotMakeOutput(gplot);
@@ -91,7 +91,7 @@ static char  mainName[] = "numa1_reg";
     nbins = numaGetCount(nahisto);
     nax = numaMakeSequence(binstart, binsize, nbins);
     fprintf(stderr, " binsize = %d, binstart = %d\n", binsize, binstart);
-    gplot = gplotCreate("/tmp/lept/numa_histo2", GPLOT_X11, "example histo 2",
+    gplot = gplotCreate("/tmp/lept/numa_histo2", GPLOT_X11, "DC histo 2",
                         "i", "histo[i]");
     gplotAddPlot(gplot, nax, nahisto, GPLOT_LINES, "sine");
     gplotMakeOutput(gplot);
@@ -103,7 +103,7 @@ static char  mainName[] = "numa1_reg";
     nbins = numaGetCount(nahisto);
     nax = numaMakeSequence(0, binsize, nbins);
     fprintf(stderr, " binsize = %d, binstart = %d\n", binsize, 0);
-    gplot = gplotCreate("/tmp/lept/numa_histo3", GPLOT_X11, "example histo 3",
+    gplot = gplotCreate("/tmp/lept/numa_histo3", GPLOT_X11, "DC histo 3",
                         "i", "histo[i]");
     gplotAddPlot(gplot, nax, nahisto, GPLOT_LINES, "sine");
     gplotMakeOutput(gplot);
@@ -117,7 +117,7 @@ static char  mainName[] = "numa1_reg";
     nax = numaMakeSequence(startval, fbinsize, nbins);
     fprintf(stderr, " binsize = %7.4f, binstart = %8.3f\n",
             fbinsize, startval);
-    gplot = gplotCreate("/tmp/lept/numa_histo4", GPLOT_X11, "example histo 4",
+    gplot = gplotCreate("/tmp/lept/numa_histo4", GPLOT_X11, "DC histo 4",
                         "i", "histo[i]");
     gplotAddPlot(gplot, nax, nahisto, GPLOT_LINES, "sine");
     gplotMakeOutput(gplot);

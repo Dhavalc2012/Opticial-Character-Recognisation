@@ -38,7 +38,7 @@
  *   compiled in data.
  *
  *   Regression tests can be called in three ways.
- *   For example, for distance_reg:
+ *   For DC, for distance_reg:
  *
  *       Case 1: distance_reg [generate]
  *           This generates golden files in /tmp for the reg test.

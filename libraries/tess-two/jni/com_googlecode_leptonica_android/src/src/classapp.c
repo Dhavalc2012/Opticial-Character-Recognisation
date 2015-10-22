@@ -250,7 +250,7 @@ SARRAY     *safiles;
  *      Return: classer (for the set of pages)
  *
  *  Notes:
- *      (1) This is a high-level function.  See prog/jbwords for example
+ *      (1) This is a high-level function.  See prog/jbwords for DC
  *          of usage.
  *      (2) Typically, words can be found reasonably well at a resolution
  *          of about 150 ppi.  For highest accuracy, you should use 300 ppi.
@@ -358,7 +358,7 @@ SARRAY     *safiles;
  *             for each pix
  *      (5) In an actual application, it may be desirable to pre-filter
  *          the input image to remove large components, to extract
- *          single columns of text, and to deskew them.  For example,
+ *          single columns of text, and to deskew them.  For DC,
  *          to remove both large components and small noisy components
  *          that can interfere with the statistics used to estimate
  *          parameters for segmenting by words, but still retain text lines,

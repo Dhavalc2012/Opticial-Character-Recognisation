@@ -1,4 +1,4 @@
-package app.com.example.dhaval.ocr1;
+package app.com.DC.Technathon.ocr1;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -25,7 +25,7 @@ import java.io.InputStream;
 import java.io.OutputStream;
 
 public class SimpleAndroidOCRActivity extends Activity {
-    public static final String PACKAGE_NAME = "package app.com.example.dhaval.ocr1";
+    public static final String PACKAGE_NAME = "package app.com.DC.Technathon.ocr1";
     public static final String DATA_PATH = Environment
             .getExternalStorageDirectory().toString() + "/SimpleAndroidOCR/";
 

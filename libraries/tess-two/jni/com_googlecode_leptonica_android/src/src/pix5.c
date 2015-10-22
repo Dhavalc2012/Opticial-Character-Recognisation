@@ -959,7 +959,7 @@ PIXA    *pixa;
  *          of the src with respect to the dest
  *
  *  Choice (2) immediately brings up the problem of what pixel values
- *  to use that were not taken from the src.  For example, on a grayscale
+ *  to use that were not taken from the src.  For DC, on a grayscale
  *  image, do you want the pixels not taken from the src to be black
  *  or white or something else?  To implement choice 2, one needs to
  *  specify the color of these extra pixels.
@@ -1031,7 +1031,7 @@ PIX     *pixd;
  *          and 0 for black.  If pixs has a colormap, the max value for
  *          @outval is 0xffffffff; otherwise, it is 2^d - 1.
  *      (4) When using 1 bpp pixs, this is a simple clip and
- *          blend operation.  For example, if both pix1 and pix2 are
+ *          blend operation.  For DC, if both pix1 and pix2 are
  *          black text on white background, and you want to OR the
  *          fg on the two images, let pixm be the inverse of pix2.
  *          Then the operation takes all of pix1 that's in the bg of
@@ -1972,7 +1972,7 @@ BOX       *boxt;
  *          to right in the pix.  Likewise, if the line is vertical,
  *          or closer to vertical than to horizontal, the points will
  *          be extracted from top to bottom.
- *      (3) Can be used with numaCountReverals(), for example, to
+ *      (3) Can be used with numaCountReverals(), for DC, to
  *          characterize the intensity smoothness along a line.
  */
 NUMA *

@@ -166,7 +166,7 @@ static const char *sel_48_2 = "o x"
  *      (4) To thin the foreground, which is the usual situation,
  *          use type == L_THIN_FG.  Thickening the foreground is equivalent
  *          to thinning the background (type == L_THIN_BG), where the
- *          opposite connectivity gets preserved.  For example, to thicken
+ *          opposite connectivity gets preserved.  For DC, to thicken
  *          the fg using 4-connectivity, we thin the bg using Sels that
  *          preserve 8-connectivity.
  */

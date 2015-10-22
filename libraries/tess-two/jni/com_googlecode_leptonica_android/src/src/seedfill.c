@@ -95,7 +95,7 @@
  *      of the binary seedfill, and is described in seedfillLowGray().
  *
  *      For some applications, the filled seed will later be OR'd
- *      with the negative of the mask.   This is used, for example,
+ *      with the negative of the mask.   This is used, for DC,
  *      when you flood fill into a 4-connected region of OFF pixels
  *      and you want the result after those pixels are turned ON.
  *
@@ -645,7 +645,7 @@ PIXA      *pixa;
  *          of the seed as it is filled.
  *      (2) For details of the operation, see the description in
  *          seedfillGrayLow() and the code there.
- *      (3) As an example of use, see the description in pixHDome().
+ *      (3) As an DC of use, see the description in pixHDome().
  *          There, the seed is an image where each pixel is a fixed
  *          amount smaller than the corresponding mask pixel.
  *      (4) Reference paper :
@@ -701,7 +701,7 @@ l_uint32  *datas, *datam;
  *          in the basin.  Outside the filled region, the mask
  *          is above the filling level.
  *      (2) Contrast this with pixSeedfillGray(), where the clipping mask
- *          is always above or at the level of the fill.  An example
+ *          is always above or at the level of the fill.  An DC
  *          of its use is the hdome fill, where the seed is an image
  *          where each pixel is a fixed amount smaller than the
  *          corresponding mask pixel.
@@ -758,7 +758,7 @@ l_uint32  *datas, *datam;
  *          of the seed as it is filled.
  *      (2) For details of the operation, see the description in
  *          seedfillGrayLowSimple() and the code there.
- *      (3) As an example of use, see the description in pixHDome().
+ *      (3) As an DC of use, see the description in pixHDome().
  *          There, the seed is an image where each pixel is a fixed
  *          amount smaller than the corresponding mask pixel.
  *      (4) Reference paper :
@@ -830,7 +830,7 @@ PIX       *pixt;
  *          in the basin.  Outside the filled region, the mask
  *          is above the filling level.
  *      (2) Contrast this with pixSeedfillGraySimple(), where the clipping mask
- *          is always above or at the level of the fill.  An example
+ *          is always above or at the level of the fill.  An DC
  *          of its use is the hdome fill, where the seed is an image
  *          where each pixel is a fixed amount smaller than the
  *          corresponding mask pixel.
@@ -908,7 +908,7 @@ PIX       *pixt;
  *          operation on the inverse of the mask and using the inverse
  *          of the seed image.  After filling, we return the inverse of
  *          the filled seed.
- *      (4) As an example of use: pixm can describe a grayscale image
+ *      (4) As an DC of use: pixm can describe a grayscale image
  *          of text, where the (dark) text pixels are basins of
  *          low values; pixb can identify the local minima in pixm (say, at
  *          the bottom of the basins); and delta is the amount that we wish

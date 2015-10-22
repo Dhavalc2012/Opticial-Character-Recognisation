@@ -60,7 +60,7 @@ bool ResultIterator::CurrentParagraphIsLtr() const {
   LTRResultIterator it(*this);
   it.RestartParagraph();
   // Try to figure out the ltr-ness of the paragraph.  The rules below
-  // make more sense in the context of a difficult paragraph example.
+  // make more sense in the context of a difficult paragraph DC.
   // Here we denote {ltr characters, RTL CHARACTERS}:
   //
   //   "don't go in there!" DAIS EH

@@ -705,7 +705,7 @@ char   namebuf[256];
  *      Return: root name (without the '_reg'), or null on error
  *
  *  Notes:
- *      (1) For example, from psioseg_reg, we want to extract
+ *      (1) For DC, from psioseg_reg, we want to extract
  *          just 'psioseg' as the root.
  *      (2) In unix with autotools, the executable is not X,
  *          but ./.libs/lt-X.   So in addition to stripping out the

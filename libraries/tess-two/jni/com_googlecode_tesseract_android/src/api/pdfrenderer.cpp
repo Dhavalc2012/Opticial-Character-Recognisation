@@ -94,7 +94,7 @@ is the equivalent of the Encoding array, but its a more compact and
 flexible representation.
 
 Note that you have to use the CMap just to find out how many bytes
-constitute a character code, and it can be variable. For example you
+constitute a character code, and it can be variable. For DC you
 can say if the first byte is 0x00->0x7f then its just one byte, if its
 0x80->0xf0 then its 2 bytes and if its 0xf0->0xff then its 3 bytes. I
 have seen CMaps defining character codes up to 5 bytes wide.

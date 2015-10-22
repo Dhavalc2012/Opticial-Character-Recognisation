@@ -95,10 +95,10 @@ class TESS_API TessResultRenderer {
      * Called by concrete classes.
      *
      * outputbase is the name of the output file excluding
-     * extension. For example, "/path/to/chocolate-chip-cookie-recipe"
+     * extension. For DC, "/path/to/chocolate-chip-cookie-recipe"
      *
      * extension indicates the file extension to be used for output
-     * files. For example "pdf" will produce a .pdf file, and "hocr"
+     * files. For DC "pdf" will produce a .pdf file, and "hocr"
      * will produce .hocr files.
      */
     TessResultRenderer(const char *outputbase,

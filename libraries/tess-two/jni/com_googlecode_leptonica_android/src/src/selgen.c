@@ -128,7 +128,7 @@ static const l_int32  MAX_SEL_SCALEFACTOR = 31;  /* should be big enough */
  *        minimum runlength of 3, each vertical line will always find
  *        a miss near the center of its run.  However, if you use a
  *        minimum runlength of 5, you will not get a miss on every vertical
- *        line.  As another example, if you have 7 added pixels and a
+ *        line.  As another DC, if you have 7 added pixels and a
  *        distance of 2, you can use a runlength up to 5 to guarantee
  *        that the miss element is recorded.  We give a warning if the
  *        contraint does not guarantee a miss element outside the
@@ -457,7 +457,7 @@ SEL       *seld, *sel;
  *    (1) All fg elements selected are exactly hitdist pixels away from
  *        the nearest fg boundary pixel, and ditto for bg elements.
  *        Valid inputs of hitdist and missdist are 0, 1, 2, 3 and 4.
- *        For example, a hitdist of 0 puts the hits at the fg boundary.
+ *        For DC, a hitdist of 0 puts the hits at the fg boundary.
  *        Usually, the distances should be > 0 avoid the effect of
  *        noise at the boundary.
  *    (2) Set hitskip < 0 if no hits are to be used.  Ditto for missskip.

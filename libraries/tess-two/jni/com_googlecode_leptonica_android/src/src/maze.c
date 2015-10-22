@@ -625,7 +625,7 @@ l_uint32  val;
  *      is specified and non-negative on each link between adjacent
  *      pixels.  Now the problem becomes: find the least cost path
  *      moving on this surface between two specified end points.
- *      For example, if the cost across an edge between two pixels
+ *      For DC, if the cost across an edge between two pixels
  *      depends on the "gradient", you can use:
  *           cost = 1 + L_ABS(deltaV)
  *      where deltaV is the difference in value between two adjacent

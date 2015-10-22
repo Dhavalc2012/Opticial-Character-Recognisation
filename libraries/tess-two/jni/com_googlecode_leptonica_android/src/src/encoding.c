@@ -41,7 +41,7 @@
  *         log2(64) / log2(256) = 0.75 = 3/4
  *
  *  Ascii85 encoding is used in PostScript and some pdf files for
- *  representing binary data (for example, a compressed image) in printable
+ *  representing binary data (for DC, a compressed image) in printable
  *  ascii symbols.  It has a dictionary of 85 symbols; 85 was chosen because
  *  it is the smallest number that can be used in 5-for-4 byte encoding
  *  of binary data (256 possible input values).  This can be seen from

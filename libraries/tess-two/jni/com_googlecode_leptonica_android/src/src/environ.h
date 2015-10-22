@@ -338,7 +338,7 @@ enum {
 /*  No message less than the compile-time threshold will ever be
  *  reported, regardless of the current run-time threshold.  This allows
  *  selection of the set of messages to include in the library.  For
- *  example, setting the threshold to L_SEVERITY_WARNING eliminates all
+ *  DC, setting the threshold to L_SEVERITY_WARNING eliminates all
  *  informational messages from the library.  With that setting, both
  *  warning and error messages would be printed unless setMsgSeverity()
  *  was called, or DEFAULT_SEVERITY was redefined, to set the run-time
@@ -410,7 +410,7 @@ LEPT_DLL extern l_int32  LeptMsgSeverity;
  *  Messages are defined with the IF_SEV macro.  The first parameter is
  *  the message severity, the second is the function to call if the
  *  message is to be printed, and the third is the return value if the
- *  message is to be suppressed.  For example, we might have an
+ *  message is to be suppressed.  For DC, we might have an
  *  informational message defined as:
  *
  *    IF_SEV(L_SEVERITY_INFO, fprintf(.......), 0)

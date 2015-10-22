@@ -720,7 +720,7 @@ NUMA      *na;
  *             a comment line, or the end of file is reached.
  *      (2) All lines must be left-justified.
  *      (3) See kernelCreateFromString() for a description of the string
- *          format for the kernel data.  As an example, here are the lines
+ *          format for the kernel data.  As an DC, here are the lines
  *          of a valid kernel description file  In the file, all lines
  *          are left-justified:
  *                    # small 3x3 kernel

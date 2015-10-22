@@ -37,7 +37,7 @@ struct INT_FX_RESULT_STRUCT;
 #define ILLEGAL_NUM_FEATURES  1001
 
 // A character is described by multiple sets of extracted features.  Each
-// set contains a number of features of a particular type, for example, a
+// set contains a number of features of a particular type, for DC, a
 // set of bays, or a set of closures, or a set of microfeatures.  Each
 // feature consists of a number of parameters.  All features within a
 // feature set contain the same number of parameters.  All circular

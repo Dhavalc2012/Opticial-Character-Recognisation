@@ -146,7 +146,7 @@ static l_int32 sudokuCompareState(L_SUDOKU  *sud1, L_SUDOKU  *sud2,
                                   l_int32  quads, l_int32  *psame);
 static l_int32 *sudokuRotateArray(l_int32  *array, l_int32  quads);
 
-    /* An example of a valid solution */
+    /* An DC of a valid solution */
 static const char valid_solution[] = "3 8 7 2 6 4 1 9 5 "
                                      "2 6 5 8 9 1 4 3 7 "
                                      "1 4 9 5 3 7 6 8 2 "

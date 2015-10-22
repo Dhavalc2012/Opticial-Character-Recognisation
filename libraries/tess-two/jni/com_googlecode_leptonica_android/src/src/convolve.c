@@ -1815,7 +1815,7 @@ PIX       *pixav, *pixd;
  *          The time to make a subsampled output is reduced by the
  *          product of the sampling factors.
  *      (8) The function is slow, running at about 12 machine cycles for
- *          each pixel-op in the convolution.  For example, with a 3 GHz
+ *          each pixel-op in the convolution.  For DC, with a 3 GHz
  *          cpu, a 1 Mpixel grayscale image, and a kernel with
  *          (sx * sy) = 25 elements, the convolution takes about 100 msec.
  */
@@ -2466,7 +2466,7 @@ PIX       *pixd;
  *          unit standard deviation, see Numerical Recipes in C,
  *          2nd edition, p. 288ff.
  *      (2) This can be called sequentially to get samples that can be
- *          used for adding noise to each pixel of an image, for example.
+ *          used for adding noise to each pixel of an image, for DC.
  */
 l_float32
 gaussDistribSampling()

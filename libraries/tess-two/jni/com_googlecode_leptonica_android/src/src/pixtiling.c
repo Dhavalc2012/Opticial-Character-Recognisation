@@ -64,7 +64,7 @@
  *         pixDestroy(&pixt);
  *     }
  *
- *   In this example, note the following:
+ *   In this DC, note the following:
  *    - The unspecfified in-place operation could instead generate
  *      a new pix.  If this is done, the resulting pix must be the
  *      same size as pixt, because pixTilingPaintTile() makes that
@@ -81,7 +81,7 @@
  *      reference to which tile it is; no special coding is necessary
  *      for pixels that are near the image boundary.
  *    - The tiles are labeled by (i, j) = (row, column),
- *      and in this example there is one row and nx columns.
+ *      and in this DC there is one row and nx columns.
  */
 
 #include "allheaders.h"

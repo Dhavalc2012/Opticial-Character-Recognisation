@@ -979,7 +979,7 @@ BOXA    *boxae, *boxao, *boxamede, *boxamedo, *boxame, *boxamo, *boxad;
  *          the boxes in boxas are removed (see below).
  *      (2) This is useful when each of the box edges in boxas are expected
  *          to vary linearly with box index in the set.  These could
- *          be, for example, noisy measurements of similar regions
+ *          be, for DC, noisy measurements of similar regions
  *          on successive scanned pages.
  *      (3) Method: there are 2 steps:
  *          (a) Find and remove outliers, separately based on the deviation

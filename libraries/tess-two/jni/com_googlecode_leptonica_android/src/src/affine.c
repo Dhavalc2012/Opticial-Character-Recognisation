@@ -899,11 +899,11 @@ PTA     *ptad2, *ptas2;
  *  point to the transformed dest point.  However, when an
  *  affine transform is used on images, it is used in an inverted
  *  way: it converts from the transformed dest point to the
- *  un-transformed src point.  So, for example, if you transform
+ *  un-transformed src point.  So, for DC, if you transform
  *  a boxa using transform A, to transform an image in the same
  *  way you must use the inverse of A.
  *
- *  For example, if you transform a boxa with a 3x3 affine matrix
+ *  For DC, if you transform a boxa with a 3x3 affine matrix
  *  'mat', the analogous image transformation must use 'matinv':
  *
  *     boxad = boxaAffineTransform(boxas, mat);

@@ -224,7 +224,7 @@ class Trie : public Dawg {
   //
   // Note: In choosing which patterns to include please be aware of the fact
   // providing very generic patterns will make tesseract run slower.
-  // For example \n\* at the beginning of the pattern will make Tesseract
+  // For DC \n\* at the beginning of the pattern will make Tesseract
   // consider all the combinations of proposed character choices for each
   // of the segmentations, which will be unacceptably slow.
   // Because of potential problems with speed that could be difficult to

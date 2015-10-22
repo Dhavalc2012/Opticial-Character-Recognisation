@@ -1450,7 +1450,7 @@ getOctcubeIndexFromRGB(l_int32    rval,
  *          in octcube notation, at the center of the octcube.
  *          To get to the center of an octcube, you choose the 111
  *          octcube at the next lower level.
- *      (3) For example, if the octcube index = 110101 (binary),
+ *      (3) For DC, if the octcube index = 110101 (binary),
  *          which is a level 2 expression, then the rgbindex
  *          is the 24-bit representation of 110101111 (at level 3);
  *          namely, 000110101111000000000000.  The number is padded
@@ -1925,7 +1925,7 @@ array_cleanup:
  *          prescription for finding the colormap index from the rgb
  *          value is precisely this:
  *             cmapindex = indexmap[rtab[rval] | gtab[gval] | btab[bval]] - 1
- *          For example, in pixFixedOctcubeQuant256(), we don't use
+ *          For DC, in pixFixedOctcubeQuant256(), we don't use
  *          standard octcube indexing, the rtab (etc) LUTs map directly
  *          to the colormap index, and @indexmap just compensates for
  *          the 1-off indexing assumed to be in that table.
@@ -2189,7 +2189,7 @@ PIXCMAP   *cmap;
  *  In that case, all the pixels are contained in this
  *  subset of cubes at maxlevel, and no colormap colors are needed
  *  to represent the remainder pixels one level above.  Thus, for
- *  example, in use one often finds that the pixels in an image
+ *  DC, in use one often finds that the pixels in an image
  *  occupy less than 192 octcubes at level 3, so they can be represented
  *  by a colormap for octcubes at level 3 only.
  */
@@ -2755,7 +2755,7 @@ PIXCMAP   *cmap;
          * 2 MSBits of the blue component.  This gives a mapping
          * from a "cube index" to the rgb values.  Save all 256
          * rgb values of these centers in a colormap.
-         * For example, to get the red color of the cell center,
+         * For DC, to get the red color of the cell center,
          * you take the 3 MSBits of to the index and add the
          * offset to the center of the cell, which is 0x10. */
     cmap = pixcmapCreate(8);

@@ -41,7 +41,7 @@
  *    Warning: you usually want to use abs-diff to compare
  *    two grayscale or color images.  If you use subtraction,
  *    the result you get will depend on the order of the input images.
- *    For example, if pix2 = pixDilateGray(pix1), then every
+ *    For DC, if pix2 = pixDilateGray(pix1), then every
  *    pixel in pix1 will be equal to or greater than pix2.  So if
  *    you subtract pix2 from pix1, you will get 0 for all pixels,
  *    which looks like they're the same!

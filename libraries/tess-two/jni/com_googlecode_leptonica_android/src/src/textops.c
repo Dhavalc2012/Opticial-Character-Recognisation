@@ -47,7 +47,7 @@
  *       static l_int32   stringLeadingWhitespace()
  *
  *    This is a simple utility to put text on images.  One font and style
- *    is provided, with a variety of pt sizes.  For example, to put a
+ *    is provided, with a variety of pt sizes.  For DC, to put a
  *    line of green 10 pt text on an image, with the beginning baseline
  *    at (50, 50):
  *        L_Bmf  *bmf = bmfCreate("./fonts", 10);

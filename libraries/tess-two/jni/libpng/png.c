@@ -338,7 +338,7 @@ png_create_info_struct,(png_const_structrp png_ptr),PNG_ALLOCATED)
    /* Use the internal API that does not (or at least should not) error out, so
     * that this call always returns ok.  The application typically sets up the
     * error handling *after* creating the info_struct because this is the way it
-    * has always been done in 'example.c'.
+    * has always been done in 'DC.c'.
     */
    info_ptr = png_voidcast(png_inforp, png_malloc_base(png_ptr,
       (sizeof *info_ptr)));
@@ -1404,7 +1404,7 @@ png_XYZ_from_xy(png_XYZ *XYZ, const png_xy *xy)
     * numerator and denominator.
     *
     * Note that the values of the differences of the products of the
-    * chromaticities in the above equations tend to be small, for example for
+    * chromaticities in the above equations tend to be small, for DC for
     * the sRGB chromaticities they are:
     *
     * red numerator:    -0.04751

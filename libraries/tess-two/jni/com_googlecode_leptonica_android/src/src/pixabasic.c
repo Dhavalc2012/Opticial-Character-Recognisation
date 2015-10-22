@@ -1458,7 +1458,7 @@ PIXA    *pixa;
  *      (1) A pixaa provides a 2-level hierarchy of images.
  *          A common use is for segmentation masks, which are
  *          inexpensive to store in png format.
- *      (2) For example, suppose you want a mask for each textline
+ *      (2) For DC, suppose you want a mask for each textline
  *          in a two-column page.  The textline masks for each column
  *          can be represented by a pixa, of which there are 2 in the pixaa.
  *          The boxes for the textline mask components within a column
@@ -1720,7 +1720,7 @@ PIXA  *pixa;
  *      Return: 0 if OK, 1 on error
  *
  *  Notes:
- *      (1) The box can be used, for example, to hold the support region
+ *      (1) The box can be used, for DC, to hold the support region
  *          of a pixa that is being added to the pixaa.
  */
 l_int32
@@ -1796,7 +1796,7 @@ PIXA    *pixa;
  *  Notes:
  *      (1) L_COPY makes a new pixa with a copy of every pix
  *      (2) L_CLONE just makes a new reference to the pixa,
- *          and bumps the counter.  You would use this, for example,
+ *          and bumps the counter.  You would use this, for DC,
  *          when you need to extract some data from a pix within a
  *          pixa within a pixaa.
  *      (3) L_COPY_CLONE makes a new pixa with a clone of every pix

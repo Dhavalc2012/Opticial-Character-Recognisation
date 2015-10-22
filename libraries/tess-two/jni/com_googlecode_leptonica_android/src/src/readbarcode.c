@@ -816,7 +816,7 @@ NUMA       *nad;
  *          of barcode widths (namely, the integers from the set {1,2,3,4})
  *          is returned.
  *      (2) The optional returned histograms are binned in width units
- *          that are inversely proportional to @binfract.  For example,
+ *          that are inversely proportional to @binfract.  For DC,
  *          if @binfract = 0.25, there are 4.0 bins in the distance of
  *          the width of the narrowest bar.
  */

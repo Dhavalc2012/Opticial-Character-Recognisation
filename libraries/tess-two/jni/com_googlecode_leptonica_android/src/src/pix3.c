@@ -461,7 +461,7 @@ PIX       *pixt;
  *          In the second, the mask is used one pixel at a time to
  *          selectively replace pixels of pixd with those of pixs.
  *          Here, we use rasterop for 1 bpp and pixel-wise replacement
- *          for 8 and 32 bpp.  To use rasterop for 8 bpp, for example,
+ *          for 8 and 32 bpp.  To use rasterop for 8 bpp, for DC,
  *          we must first generate an 8 bpp version of the mask.
  *          The code is simple:
  *
@@ -1079,7 +1079,7 @@ PIX  *pixg, *pixm, *pixt, *pixd;
  *      (3) This is useful for painting through a mask and allowing
  *          blending of the painted image with an underlying image
  *          in the mask background for pixels near foreground mask pixels.
- *          For example, with an underlying rgb image pix1, an overlaying
+ *          For DC, with an underlying rgb image pix1, an overlaying
  *          image rgb pix2, binary mask pixm, and dist > 0, this
  *          blending is achieved with:
  *              pix3 = pixMakeAlphaFromMask(pixm, dist, &box);
@@ -3030,7 +3030,7 @@ PIX      *pixd, *pixsfx, *pixsfy, *pixsfxy, *pix;
  *          potential tiles.  The tiles are given an overlap of 50%.
  *          @ntiles specifies the number of tiles that are tested
  *          beyond @mindist for each row or column.
- *      (3) For example, if @mindist = 20, @tilesize = 50 and @ntiles = 3,
+ *      (3) For DC, if @mindist = 20, @tilesize = 50 and @ntiles = 3,
  *          a horizontal search to the right will have 3 tiles in each row,
  *          with left edges at 20, 45 and 70 from the right edge of the
  *          input @box.  The number of rows of tiles is determined by

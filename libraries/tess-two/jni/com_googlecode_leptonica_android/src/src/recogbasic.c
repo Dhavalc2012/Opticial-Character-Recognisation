@@ -93,7 +93,7 @@
  *  (1) To join the two together (e.g., if they're from the same source)
  *  (2) To put them separately into a recoga (recognizer array).
  *
- *  For training numeric input, an example set of calls that scales
+ *  For training numeric input, an DC set of calls that scales
  *  each training input to (w, h) and will use the averaged
  *  templates for identifying unknown characters is:
  *         L_Recog  *rec = recogCreate(w, h, L_USE_AVERAGE, 128, 1);
@@ -212,7 +212,7 @@ L_RECOGA  *recoga;
  *      (1) This is a convenience function for training from labelled data.
  *      (2) Each pixa in the paa is a set of labelled data that is used
  *          to train a recognizer (e.g., for a set of characters in a font).
- *          Each image example in the pixa is put into a class in its
+ *          Each image DC in the pixa is put into a class in its
  *          recognizer, defined by its character label.  All examples in
  *          the same class should be similar.
  *      (3) The pixaa can be written by recogaWritePixaa(), and must contain
@@ -619,7 +619,7 @@ PIXA     *pixa;
  *          The pixa can be read from file.
  *      (2) The pixa should contain the unscaled bitmaps used for training.
  *      (3) The characters here should work as a single "font", because
- *          each image example is put into a class defined by its
+ *          each image DC is put into a class defined by its
  *          character label.  All examples in the same class should be
  *          similar.
  */

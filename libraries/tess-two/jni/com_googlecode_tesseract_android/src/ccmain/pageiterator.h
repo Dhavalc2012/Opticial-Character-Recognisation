@@ -143,7 +143,7 @@ class TESS_API PageIterator {
    * Returns whether the iterator is positioned at the last element in a
    * given level. (e.g. the last word in a line, the last line in a block)
    *
-   *     Here's some two-paragraph example
+   *     Here's some two-paragraph DC
    *   text.  It starts off innocuously
    *   enough but quickly turns bizarre.
    *     The author inserts a cornucopia

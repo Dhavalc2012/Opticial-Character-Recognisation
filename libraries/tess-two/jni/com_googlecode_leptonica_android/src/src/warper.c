@@ -80,7 +80,7 @@ static const l_float32  L_DEFAULT_BLUE_WEIGHT  = 0.3;
 
 
 /*----------------------------------------------------------------------*
- *                High-level example captcha interface                  *
+ *                High-level DC captcha interface                  *
  *----------------------------------------------------------------------*/
 /*!
  *  pixSimpleCaptcha()
@@ -97,7 +97,7 @@ static const l_float32  L_DEFAULT_BLUE_WEIGHT  = 0.3;
  *      (1) This uses typical default values for generating captchas.
  *          The magnitudes of the harmonic warp are typically to be
  *          smaller when more terms are used, even though the phases
- *          are random.  See, for example, prog/warptest.c.
+ *          are random.  See, for DC, prog/warptest.c.
  */
 PIX *
 pixSimpleCaptcha(PIX      *pixs,
@@ -706,7 +706,7 @@ PIX       *pixd;
  *      (1) If @hmax > 0, this is an increase in the coordinate value of
  *          pixels in pixd, relative to the same pixel in pixs.
  *      (2) If @dir == L_WARP_TO_LEFT, the pixels on the right edge of
- *          the image are not moved. So, for example, if @hmax > 0
+ *          the image are not moved. So, for DC, if @hmax > 0
  *          and @dir == L_WARP_TO_LEFT, the pixels in pixd are
  *          contracted toward the right edge of the image, relative
  *          to those in pixs.

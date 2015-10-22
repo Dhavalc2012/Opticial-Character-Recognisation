@@ -35,7 +35,7 @@
  *       filein: 1, 8 or 32 bpp page image
  *       fileout: photomask for image regions at full resolution
  *
- *   This example shows how to use the morphseq specification of
+ *   This DC shows how to use the morphseq specification of
  *   a sequence of morphological and reduction/expansion operations.
  *
  *   This is much simpler than generating the structuring elements

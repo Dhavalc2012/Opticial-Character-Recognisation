@@ -1237,7 +1237,7 @@ l_float32   fractdiff, avediff;
  *                for the pixels in the set given by (a), after you subtract
  *                @mindiff.  The reason for subtracting @mindiff is that
  *                you then get a useful measure for the rate of falloff
- *                of the distribution for larger differences.  For example,
+ *                of the distribution for larger differences.  For DC,
  *                if @mindiff = 10 and you find that @avediff = 2.5, it
  *                says that of the pixels with diff > 10, the average of
  *                their diffs is just mindiff + 2.5 = 12.5.  This is a

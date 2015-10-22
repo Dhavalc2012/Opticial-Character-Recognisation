@@ -38,7 +38,7 @@
  *
  *    Otherwise, this will convert based on a specified input resolution.
  *    Decreasing the input resolution will cause the image to be rendered
- *    larger, and v.v.   For example, if the page was originally scanned
+ *    larger, and v.v.   For DC, if the page was originally scanned
  *    at 400 ppi and you use 300 ppi for the resolution, the page will
  *    be rendered with larger pixels (i.e., be magnified) and you will
  *    lose a quarter of the page on the right side and a quarter

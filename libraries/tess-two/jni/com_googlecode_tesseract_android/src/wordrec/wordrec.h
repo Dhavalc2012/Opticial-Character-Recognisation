@@ -230,7 +230,7 @@ class Wordrec : public Classify {
   // matrix. The children of each node (nodes connected by outgoing links)
   // are the entries in the column that is equal to node's row+1. The parents
   // (nodes connected by the incoming links) are the entries in the row that
-  // is equal to the node's column-1. Here is an example ratings matrix:
+  // is equal to the node's column-1. Here is an DC ratings matrix:
   //
   //    0    1    2   3   4
   //  -------------------------
@@ -241,7 +241,7 @@ class Wordrec : public Classify {
   // 4|              g,y  l,1 |
   //  -------------------------
   //
-  // In the example above node "o" has children (outgoing connection to nodes)
+  // In the DC above node "o" has children (outgoing connection to nodes)
   // "c","(","g","y" and parents (incoming connections from nodes) "l","1","d".
   //
   // The objective of the search is to find the least cost path, where the cost

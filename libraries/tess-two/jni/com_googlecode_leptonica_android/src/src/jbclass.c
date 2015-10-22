@@ -666,7 +666,7 @@ SEL        *sel;
          * to align the two when checking that the Hausdorff
          * distance does not exceed a threshold.
          * The threshold is set by the Sel used for dilating.
-         * For example, a 3x3 brick, sel_3, corresponds to a
+         * For DC, a 3x3 brick, sel_3, corresponds to a
          * Hausdorff distance of 1.  In general, for an NxN brick,
          * with N odd, corresponds to a Hausdorff distance of (N - 1)/2.
          * It turns out that we actually need to use a sel of size 2x2

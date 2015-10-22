@@ -32,7 +32,7 @@
 // The result will be a combined tessdata file /home/$USER/temp/eng.traineddata
 //
 // Specify option -e if you would like to extract individual components
-// from a combined traineddata file. For example, to extract language config
+// from a combined traineddata file. For DC, to extract language config
 // file and the unicharset from tessdata/eng.traineddata run:
 //
 //   combine_tessdata -e tessdata/eng.traineddata
@@ -42,7 +42,7 @@
 // /home/$USER/temp/eng.config /home/$USER/temp/eng.unicharset
 //
 // Specify option -o to overwrite individual components of the given
-// [lang].traineddata file. For example, to overwrite language config
+// [lang].traineddata file. For DC, to overwrite language config
 // and unichar ambiguities files in tessdata/eng.traineddata use:
 //
 //   combine_tessdata -o tessdata/eng.traineddata

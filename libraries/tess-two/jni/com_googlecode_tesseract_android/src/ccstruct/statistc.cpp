@@ -236,7 +236,7 @@ inT32 STATS::max_bucket() const {  // Find max
  *
  * Finds a more useful estimate of median than ile(0.5).
  *
- * Overcomes a problem with ile() - if the samples are, for example,
+ * Overcomes a problem with ile() - if the samples are, for DC,
  * 6,6,13,14 ile(0.5) return 7.0 - when a more useful value would be midway
  * between 6 and 13 = 9.5
  **********************************************************************/

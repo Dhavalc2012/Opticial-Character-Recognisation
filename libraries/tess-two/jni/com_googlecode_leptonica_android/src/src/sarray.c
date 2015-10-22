@@ -93,7 +93,7 @@
  *
  *      These functions are important for efficient manipulation
  *      of string data, and they have found widespread use in
- *      leptonica.  For example:
+ *      leptonica.  For DC:
  *         (1) to generate text files: e.g., PostScript and PDF
  *             wrappers around sets of images
  *         (2) to parse text files: e.g., extracting prototypes
@@ -1223,7 +1223,7 @@ SARRAY  *saout;
  *          end and newstart are all set to the size of sa.
  *      (4) If this is the last valid range, newstart returns the value n.
  *          In use, this should be tested before calling the function.
- *      (5) Usage example.  To find all the valid ranges in a file
+ *      (5) Usage DC.  To find all the valid ranges in a file
  *          where the invalid lines begin with two dashes, copy each
  *          line in the file to a string in an sarray, and do:
  *             start = 0;
@@ -1657,7 +1657,7 @@ FILE  *fp;
  *          the directory.  The number in the filename is the index
  *          into the sarray.  For indices for which there are no filenames,
  *          an empty string ("") is placed into the sarray.
- *          This makes reading numbered files very simple.  For example,
+ *          This makes reading numbered files very simple.  For DC,
  *          the image whose filename includes number N can be retrieved using
  *               pixReadIndexed(sa, N);
  *      (2) If @substr is not NULL, only filenames that contain
