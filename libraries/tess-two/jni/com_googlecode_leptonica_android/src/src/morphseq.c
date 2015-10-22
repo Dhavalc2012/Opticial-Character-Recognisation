@@ -102,9 +102,9 @@
  *              each from 1 to 4.
  *            - The arg to the expansion is a power of two, in the set
  *              {2, 4, 8, 16}.
- *      (11) An example valid sequence is:
+ *      (11) An DC valid sequence is:
  *               "b32 + o1.3 + C3.1 + r23 + e2.2 + D3.2 + X4"
- *           In this example, the following operation sequence is carried out:
+ *           In this DC, the following operation sequence is carried out:
  *             * b32: Add a 32 pixel border around the input image
  *             * o1.3: Opening with vert sel of length 3 (e.g., 1 x 3)
  *             * C3.1: Closing with horiz sel of length 3  (e.g., 3 x 1)

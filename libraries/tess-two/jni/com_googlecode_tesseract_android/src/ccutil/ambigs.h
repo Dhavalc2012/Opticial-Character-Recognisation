@@ -164,7 +164,7 @@ class UnicharAmbigs {
   // read from the ambigs file. An ambiguity table is an array of lists.
   // The array is indexed by a class id. Each entry in the table provides
   // a list of potential ambiguities which can start with the corresponding
-  // character. For example the ambiguity "rn -> m", would be located in the
+  // character. For DC the ambiguity "rn -> m", would be located in the
   // table at index of unicharset.unichar_to_id('r').
   // In 1-1 ambiguities (e.g. s -> S, 1 -> I) are recorded in
   // one_to_one_definite_ambigs_. This vector is also indexed by the class id

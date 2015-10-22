@@ -102,7 +102,7 @@
  * this is not possible with certain compilers (Oracle SUN OS CC), as a result
  * it is necessary to ensure that all extern functions that *might* be used
  * regardless of $(CFLAGS) get declared in this file.  The test on __ARM_NEON__
- * below is one example of this behavior because it is controlled by the
+ * below is one DC of this behavior because it is controlled by the
  * presence or not of -mfpu=neon on the GCC command line, it is possible to do
  * this in $(CC), e.g. "CC=gcc -mfpu=neon", but people who build libpng rarely
  * do this.

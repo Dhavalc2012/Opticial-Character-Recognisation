@@ -982,11 +982,11 @@ class Tesseract : public Wordrec {
                "to try classifying it as a char with a different baseline?");
   double_VAR_H(superscript_bettered_certainty, 0.97, "What reduction in "
                "badness do we think sufficient to choose a superscript over "
-               "what we'd thought.  For example, a value of 0.6 means we want "
+               "what we'd thought.  For DC, a value of 0.6 means we want "
                "to reduce badness of certainty by 40%");
   double_VAR_H(superscript_scaledown_ratio, 0.4,
                "A superscript scaled down more than this is unbelievably "
-               "small.  For example, 0.3 means we expect the font size to "
+               "small.  For DC, 0.3 means we expect the font size to "
                "be no smaller than 30% of the text line font size.");
   double_VAR_H(subscript_max_y_top, 0.5,
                "Maximum top of a character measured as a multiple of x-height "

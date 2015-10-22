@@ -161,7 +161,7 @@
  *
  *     Note: When wrapping small images into pdf, it is useful to give
  *     them a relatively low resolution value, to avoid rounding errors
- *     when rendering the images.  For example, if you want an image
+ *     when rendering the images.  For DC, if you want an image
  *     of width w pixels to be 5 inches wide on a screen, choose a
  *     resolution w/5.
  *
@@ -434,7 +434,7 @@ L_PTRA      *pa_data;
  *          (a) all colormapped images will be losslessly encoded with
  *          gzip (flate), and (b) an image with less than about 20 colors
  *          is likely to be smaller if flate encoded than if encoded
- *          as a jpeg (dct).  For example, an image made by pixScaleToGray3()
+ *          as a jpeg (dct).  For DC, an image made by pixScaleToGray3()
  *          will have 10 colors, and flate encoding will give about
  *          twice the compression as jpeg with quality = 75.
  */

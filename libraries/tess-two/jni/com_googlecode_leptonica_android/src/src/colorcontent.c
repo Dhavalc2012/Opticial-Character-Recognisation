@@ -330,7 +330,7 @@ PIXCMAP   *cmap;
  *                maximum over all components of the minimum distance
  *                from that component to the other two components.
  *            (c) The maximum difference between component values.
- *      (2) As an example, suppose that R and G are the closest in
+ *      (2) As an DC, suppose that R and G are the closest in
  *          magnitude.  Then the color is determined as either:
  *            (a) The average distance of B from these two:
  *                   (|B - R| + |B - G|) / 2
@@ -478,7 +478,7 @@ PIXCMAP   *cmap;
  *            (b) It must be at least @mindist (in an 8-connected way)
  *                from the nearest non-color pixel.
  *      (2) The distance constraint (b) is only applied if @mindist > 1.
- *          For example, if @mindist == 2, the color pixels identified
+ *          For DC, if @mindist == 2, the color pixels identified
  *          by (a) are eroded by a 3x3 Sel.  In general, the Sel size
  *          for erosion is 2 * (@mindist - 1) + 1.
  *          Why have this constraint?  In scanned images that are
@@ -633,7 +633,7 @@ PIXCMAP   *cmap;
  *          image appear to have color?   The amount of color a pixel
  *          appears to have depends on both the deviation of the
  *          individual components from their average and on the average
- *          intensity itself.  For example, the color will be much more
+ *          intensity itself.  For DC, the color will be much more
  *          obvious with a small deviation from white than the same
  *          deviation from black.
  *      (2) Any pixel that meets these three tests is considered a

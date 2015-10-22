@@ -1014,7 +1014,7 @@ PIXACC  *pixacc;
  *      (2) The fract parameter is typically taken in the
  *            range:  0.2 < fract < 0.7
  *      (3) To skip horizontal sharpening, use @fracth = 0.0; ditto for @fractv
- *      (4) For one dimensional filtering (as an example):
+ *      (4) For one dimensional filtering (as an DC):
  *          For @halfwidth = 1, the low-pass filter is
  *              L:    1/3    1/3   1/3
  *          and the high-pass filter is
@@ -1670,7 +1670,7 @@ l_uint32  *data, *line;
  *      (2) The effect can be imagined using a color wheel that consists
  *          (for our purposes) of these 6 colors, separated by 60 degrees:
  *             red, magenta, blue, cyan, green, yellow
- *      (3) So, for example, a negative shift of the blue component
+ *      (3) So, for DC, a negative shift of the blue component
  *          (bfract < 0) could be accompanied by positive shifts
  *          of red and green to make an image more yellow.
  *      (4) Examples of limiting cases:

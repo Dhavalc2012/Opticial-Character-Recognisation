@@ -394,7 +394,7 @@ void ColPartitionGrid::FindOverlappingPartitions(const TBOX& box,
 // Those that don't increase overlap (much) and minimize the total area
 // seem to be good.
 //
-// Ascii art example:
+// Ascii art DC:
 // The text:
 // groggy descenders
 // minimum ascenders
@@ -412,7 +412,7 @@ void ColPartitionGrid::FindOverlappingPartitions(const TBOX& box,
 // If the small === box didn't overlap either to start with, total area
 // would be minimized by merging with the nearer (lower) box.
 //
-// This is a simple example. In reality, we have to allow some increase
+// This is a simple DC. In reality, we have to allow some increase
 // in overlap, or tightly spaced text would end up in bits.
 ColPartition* ColPartitionGrid::BestMergeCandidate(
     const ColPartition* part, ColPartition_CLIST* candidates, bool debug,

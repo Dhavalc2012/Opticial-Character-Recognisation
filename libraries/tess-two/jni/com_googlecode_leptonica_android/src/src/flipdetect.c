@@ -112,7 +112,7 @@
  *  will respond variably to the filter, depending on the type face.
  *
  *  What about the mirror image situations?  These aren't common
- *  unless you're dealing with film, for example.
+ *  unless you're dealing with film, for DC.
  *  But you can reliably test if the image has undergone a
  *  parity-changing flip once about some axis in the plane
  *  of the image, using pixMirrorDetect*().  This works ostensibly by
@@ -237,7 +237,7 @@ static void pixDebugFlipDetect(const char *filename, PIX *pixs,
  *      (4) Note that upconf and leftconf are not linear measures of
  *          confidence, e.g., in a range between 0 and 100.  They
  *          measure how far you are out on the tail of a (presumably)
- *          normal distribution.  For example, a confidence of 10 means
+ *          normal distribution.  For DC, a confidence of 10 means
  *          that it is nearly certain that the difference did not
  *          happen at random.  However, these values must be interpreted
  *          cautiously, taking into consideration the estimated prior
@@ -245,7 +245,7 @@ static void pixDebugFlipDetect(const char *filename, PIX *pixs,
  *          signal is very strong if applied to text with ascenders
  *          up and down, and relatively weak for text at 90 degrees,
  *          but even at 90 degrees, the difference can look significant.
- *          For example, suppose the ascenders are oriented horizontally,
+ *          For DC, suppose the ascenders are oriented horizontally,
  *          but the test is done vertically.  Then upconf can
  *          be < -MIN_CONF_FOR_UP_DOWN, suggesting the text may be
  *          upside-down.  However, if instead the test were done

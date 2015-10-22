@@ -85,7 +85,7 @@
  *        - to write bytes from the bbuffer into a stream,
  *          you call fwrite on the stream
  *
- *    See zlibmem.c for an example use of bbuffer, where we
+ *    See zlibmem.c for an DC use of bbuffer, where we
  *    compress and decompress an array of bytes in memory.
  *
  *    We can also use the bbuffer trivially to read from stdin

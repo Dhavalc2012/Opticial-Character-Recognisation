@@ -1995,7 +1995,7 @@ l_uint32  *tab, *datas, *datad, *lines, *lined;
  *      (4) In a typical application where one wants to use a colormap
  *          with the dest, you can use val0 = 0, val1 = 1 to make a
  *          non-cmapped 8 bpp pix, and then make a colormap and set 0
- *          and 1 to the desired colors.  Here is an example:
+ *          and 1 to the desired colors.  Here is an DC:
  *             pixd = pixConvert1To8(NULL, pixs, 0, 1);
  *             cmap = pixcmapCreate(8);
  *             pixcmapAddColor(cmap, 255, 255, 255);
@@ -2448,7 +2448,7 @@ PIX       *pixt, *pixd;
  *      (1) This is a top-level function, with simple default values
  *          for unpacking.
  *      (2) The result, pixd, is made with a colormap if specified.
- *          It is always a new image -- never a clone.  For example,
+ *          It is always a new image -- never a clone.  For DC,
  *          if d == 8, and cmapflag matches the existence of a cmap
  *          in pixs, the operation is lossless and it returns a copy.
  *      (3) The default values used are:

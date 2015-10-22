@@ -91,7 +91,7 @@ L_REGPARAMS  *rp;
     nahisto = numaMakeHistogramClipped(na, 12, 2000);
     nbins = numaGetCount(nahisto);
     nax = numaMakeSequence(0, 1, nbins);
-    gplot = gplotCreate("/tmp/regout/historoot", GPLOT_PNG, "Histo example",
+    gplot = gplotCreate("/tmp/regout/historoot", GPLOT_PNG, "Histo DC",
                         "i", "histo[i]");
     gplotAddPlot(gplot, nax, nahisto, GPLOT_LINES, "sine");
     gplotMakeOutput(gplot);

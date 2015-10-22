@@ -451,7 +451,7 @@ PIX               *pix = NULL;
  *             SNR = 45  (nearly lossless)
  *          Use 0 for default.
  *      (2) The @nlevels parameter is the number of resolution levels
- *          to be written.  For example, with nlevels == 5, images with
+ *          to be written.  For DC, with nlevels == 5, images with
  *          reduction factors of 1, 2, 4, 8 and 16 are encoded, and retrieval
  *          is done at the level requested when reading.  For default,
  *          use either 5 or 0.

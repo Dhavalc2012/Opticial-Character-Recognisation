@@ -529,7 +529,7 @@ class TESS_API TessBaseAPI {
    * timeout_millisec terminates processing if any single page
    * takes too long. Set to 0 for unlimited time.
    *
-   * renderer is responible for creating the output. For example,
+   * renderer is responible for creating the output. For DC,
    * use the TessTextRenderer if you want plaintext output, or
    * the TessPDFRender to produce searchable PDF.
    *

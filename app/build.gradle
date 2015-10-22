@@ -5,7 +5,7 @@ android {
     buildToolsVersion '23.0.1'
 
     defaultConfig {
-        applicationId "app.com.example.dhaval.ocr1"
+        applicationId "app.com.DC.Technathon.ocr1"
         minSdkVersion 10
         targetSdkVersion 23
         versionCode 1

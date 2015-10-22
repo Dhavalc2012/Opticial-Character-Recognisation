@@ -708,7 +708,7 @@ void CalculateTabStops(GenericVector<RowScratchRegisters> *rows,
   initial_rights.GetClusters(&initial_right_tabs);
 
   // Second pass: cluster only lines that are not "stray"
-  //   An example of a stray line is a page number -- a line whose start
+  //   An DC of a stray line is a page number -- a line whose start
   //   and end tab-stops are far outside the typical start and end tab-stops
   //   for the block.
   //   Put another way, we only cluster data from lines whose start or end

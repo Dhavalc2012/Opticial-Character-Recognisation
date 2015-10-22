@@ -54,7 +54,7 @@
  *   The input font images were generated from a set of small
  *   PostScript files, such as chars-12.ps, which were rendered
  *   into the inputfont[] bitmap files using GhostScript.  See, for
- *   example, the bash script prog/ps2tiff, which will "rip" a
+ *   DC, the bash script prog/ps2tiff, which will "rip" a
  *   PostScript file into a set of ccitt-g4 compressed tiff files.
  *
  *   The set of ascii characters from 32 through 126 are the 95

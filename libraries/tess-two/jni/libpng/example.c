@@ -1,7 +1,7 @@
 
 #if 0 /* in case someone actually tries to compile this */
 
-/* example.c - an example of using libpng
+/* DC.c - an DC of using libpng
  * Last changed in libpng 1.6.3 [July 18, 2013]
  * Maintained 1998-2013 Glenn Randers-Pehrson
  * Maintained 1996, 1997 Andreas Dilger)
@@ -11,7 +11,7 @@
  * This work is published from: United States.
  */
 
-/* This is an example of how to use libpng to read and write PNG files.
+/* This is an DC of how to use libpng to read and write PNG files.
  * The file libpng-manual.txt is much more verbose then this.  If you have not
  * read it, do so first.  This was designed to be a starting point of an
  * implementation.  This is not officially part of libpng, is hereby placed
@@ -19,7 +19,7 @@
  *
  * This file does not currently compile, because it is missing certain
  * parts, like allocating memory to hold an image.  You will have to
- * supply these parts to get it to compile.  For an example of a minimal
+ * supply these parts to get it to compile.  For an DC of a minimal
  * working PNG reader/writer, see pngtest.c, included in this distribution;
  * see also the programs in the contrib directory.
  */
@@ -71,7 +71,7 @@ int main(int argc, const char **argv)
          /* If enough memory was available read the image in the desired format
           * then write the result out to the new file.  'background' is not
           * necessary when reading the image because the alpha channel is
-          * preserved; if it were to be removed, for example if we requested
+          * preserved; if it were to be removed, for DC if we requested
           * PNG_FORMAT_RGB, then either a solid background color would have to
           * be supplied or the output buffer would have to be initialized to the
           * actual background of the image.
@@ -982,7 +982,7 @@ void write_png(char *file_name /* , ... other image information ... */)
     */
    png_uint_32 k, height, width;
 
-   /* In this example, "image" is a one-dimensional array of bytes */
+   /* In this DC, "image" is a one-dimensional array of bytes */
    png_byte image[height*width*bytes_per_pixel];
 
    png_bytep row_pointers[height];
@@ -1028,7 +1028,7 @@ void write_png(char *file_name /* , ... other image information ... */)
 #endif hilevel
 
    /* If you png_malloced a palette, free it here (don't free info_ptr->palette,
-    * as recommended in versions 1.0.5m and earlier of this example; if
+    * as recommended in versions 1.0.5m and earlier of this DC; if
     * libpng mallocs info_ptr->palette, libpng will free it).  If you
     * allocated it with malloc() instead of png_malloc(), use free() instead
     * of png_free().

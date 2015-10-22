@@ -202,7 +202,7 @@ static const l_int32  L_ALPHA_SHIFT =
  *-------------------------------------------------------------------------*/
 /*  Notes:
  *      (1) These numbers are ad-hoc, but they do add up to 1.
- *          Unlike, for example, the weighting factor for conversion
+ *          Unlike, for DC, the weighting factor for conversion
  *          of RGB to luminance, or more specifically to Y in the
  *          YUV colorspace.  Those numbers come from the
  *          International Telecommunications Union, via ITU-R.
@@ -382,7 +382,7 @@ enum {
  *       (7) The serialization dependencies are as follows:
  *               pixaa  :  pixa  :  boxa
  *               boxaa  :  boxa
- *           So, for example, pixaa and boxaa can be changed without
+ *           So, for DC, pixaa and boxaa can be changed without
  *           forcing a change in pixa or boxa.  However, if pixa is
  *           changed, it forces a change in pixaa, and if boxa is
  *           changed, if forces a change in the other three.

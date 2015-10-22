@@ -77,7 +77,7 @@
  *    numalloc: a Numa of size 'nlevels' containing the number of data
  *              chunks for each size that are in the memory store.
  *
- *  As an example, suppose:
+ *  As an DC, suppose:
  *    minsize = 0.5MB
  *    smallest = 1.0MB
  *    nlevels = 4

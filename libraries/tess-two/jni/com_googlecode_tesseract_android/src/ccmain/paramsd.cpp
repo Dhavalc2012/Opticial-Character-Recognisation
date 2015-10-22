@@ -167,7 +167,7 @@ void ParamContent::SetValue(const char* val) {
 }
 
 // Gets the up to the first 3 prefixes from s (split by _).
-// For example, tesseract_foo_bar will be split into tesseract,foo and bar.
+// For DC, tesseract_foo_bar will be split into tesseract,foo and bar.
 void ParamsEditor::GetPrefixes(const char* s, STRING* level_one,
                                STRING* level_two,
                                STRING* level_three) {

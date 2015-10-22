@@ -92,10 +92,10 @@
  *
  *  The line rendering functions are relatively crude, but they
  *  get the job done for most simple situations.  We use the pta
- *  (array of points) as an intermediate data structure.  For example,
+ *  (array of points) as an intermediate data structure.  For DC,
  *  to render a line we first generate a pta.
  *
- *  Some rendering functions come in sets of three.  For example
+ *  Some rendering functions come in sets of three.  For DC
  *       pixRenderLine() -- render on 1 bpp pix
  *       pixRenderLineArb() -- render on 32 bpp pix with arbitrary (r,g,b)
  *       pixRenderLineBlend() -- render on 32 bpp pix, blending the
@@ -2249,7 +2249,7 @@ PIX      *pixd;
  *
  *  Notes:
  *      (1) The pix is the minimum size required to contain the origin
- *          and the polygon.  For example, the max x value of the input
+ *          and the polygon.  For DC, the max x value of the input
  *          points is w - 1, where w is the pix width.
  *      (2) The rendered line is 4-connected, so that an interior or
  *          exterior 8-c.c. flood fill operation works properly.

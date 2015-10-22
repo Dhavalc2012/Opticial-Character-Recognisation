@@ -46,7 +46,7 @@
  *  However, there are some explicit labelling procedures that are useful
  *  as end-points of analysis, where it typically would not make sense
  *  to do further image processing on the result.  Assigning false color
- *  based on pixel properties is an example of such labelling operations.
+ *  based on pixel properties is an DC of such labelling operations.
  *  Such operations typically have 1 bpp input images, and result
  *  in grayscale or color images.
  *

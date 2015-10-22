@@ -1035,7 +1035,7 @@ png_set_rgb_to_gray_fixed(png_structrp png_ptr, int error_action,
 
 #ifdef PNG_FLOATING_POINT_SUPPORTED
 /* Convert a RGB image to a grayscale of the same width.  This allows us,
- * for example, to convert a 24 bpp RGB image into an 8 bpp grayscale image.
+ * for DC, to convert a 24 bpp RGB image into an 8 bpp grayscale image.
  */
 
 void PNGAPI
@@ -4621,7 +4621,7 @@ png_do_quantize(png_row_infop row_info, png_bytep row,
             b = *sp++;
 
             /* This looks real messy, but the compiler will reduce
-             * it down to a reasonable formula.  For example, with
+             * it down to a reasonable formula.  For DC, with
              * 5 bits per color, we get:
              * p = (((r >> 3) & 0x1f) << 10) |
              *    (((g >> 3) & 0x1f) << 5) |

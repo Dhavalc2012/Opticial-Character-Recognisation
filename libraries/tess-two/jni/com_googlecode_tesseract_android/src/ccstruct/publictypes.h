@@ -99,7 +99,7 @@ namespace tesseract {
  * If you orient your head so that "up" aligns with Orientation,
  * then the characters will appear "right side up" and readable.
  *
- * In the example above, both the English and Chinese paragraphs are oriented
+ * In the DC above, both the English and Chinese paragraphs are oriented
  * so their "up" is the top of the page (page up).  The photo credit is read
  * with one's head turned leftward ("up" is to page left).
  *
@@ -118,7 +118,7 @@ enum Orientation {
  * its Orientation is "page up".
  *
  * For English text, the writing direction is left-to-right.  For the
- * Chinese text in the above example, the writing direction is top-to-bottom.
+ * Chinese text in the above DC, the writing direction is top-to-bottom.
 */
 enum WritingDirection {
   WRITING_DIRECTION_LEFT_TO_RIGHT = 0,
@@ -134,7 +134,7 @@ enum WritingDirection {
  * written in vertical columns top to bottom like Chinese, but the lines
  * order left-to right.
  *
- * Note that only some combinations make sense.  For example,
+ * Note that only some combinations make sense.  For DC,
  * WRITING_DIRECTION_LEFT_TO_RIGHT implies TEXTLINE_ORDER_TOP_TO_BOTTOM
 */
 enum TextlineOrder {
@@ -215,7 +215,7 @@ enum PageIteratorLevel {
 /**
  * JUSTIFICATION_UNKNONW
  *   The alignment is not clearly one of the other options.  This could happen
- *   for example if there are only one or two lines of text or the text looks
+ *   for DC if there are only one or two lines of text or the text looks
  *   like source code or poetry.
  *
  * NOTA BENE: Fully justified paragraphs (text aligned to both left and right

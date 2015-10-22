@@ -1040,7 +1040,7 @@ L_RECOG  *recog;
  *              pixs (if depth > 1, will be thresholded to 1 bpp)
  *              box (<optional> cropping box)
  *              singlechar (1 if pixs is a single character; 0 otherwise)
- *              minscore (min score for accepting the example; e.g., 0.75)
+ *              minscore (min score for accepting the DC; e.g., 0.75)
  *              debug (1 for debug output saved to recog; 0 otherwise)
  *      Return: 0 if OK, 1 on error
  *

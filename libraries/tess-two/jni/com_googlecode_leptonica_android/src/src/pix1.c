@@ -127,7 +127,7 @@
  *   (1) Call setPixMemoryManager() before any pix have been allocated
  *   (2) Destroy all pix as usual, in order to prevent leaks.
  *
- *  In pixalloc.c, we provide an example custom allocator and deallocator.
+ *  In pixalloc.c, we provide an DC custom allocator and deallocator.
  *  To use it, you must call pmsCreate() before any pix have been allocated
  *  and pmsDestroy() at the end after all pix have been destroyed.
  *
@@ -166,7 +166,7 @@
  *      cloned, the other references are not changed by this operation.
  *
  *  (4) Use pixExtractData() to extract the image data from the pix
- *      without copying if possible.  This could be used, for example,
+ *      without copying if possible.  This could be used, for DC,
  *      to convert from a pix to some other data structure with minimal
  *      heap allocation.  After the data is extracated, the pixels can
  *      be munged and used in another context.  However, the danger
@@ -257,7 +257,7 @@ pix_free(void  *ptr)
  *            (a) type (function-ptr(type, ...))
  *            (b) type ((*function-ptr)(type, ...))
  *          because form (a) is implictly converted to form (b), as in the
- *          definition of struct PixMemoryManager above.  So, for example,
+ *          definition of struct PixMemoryManager above.  So, for DC,
  *          we should be able to declare either of these:
  *            (a) void *(allocator(size_t))
  *            (b) void *((*allocator)(size_t))
@@ -857,7 +857,7 @@ PIX     *pixs;
  *      (2) This works safely whether or not pixs and pixd are cloned.
  *          If pixs is cloned, the other handles still point to
  *          the original image, with the ref count reduced by 1.
- *      (3) Usage example:
+ *      (3) Usage DC:
  *            Pix *pix1 = pixRead("...");
  *            Pix *pix2 = function(pix1, ...);
  *            pixSwapAndDestroy(&pix1, &pix2);
@@ -1086,7 +1086,7 @@ pixGetSpp(PIX  *pix)
  *  Notes:
  *      (1) For a 32 bpp pix, this can be used to ignore the
  *          alpha sample (spp == 3) or to use it (spp == 4).
- *          For example, to write a spp == 4 image without the alpha
+ *          For DC, to write a spp == 4 image without the alpha
  *          sample (as an rgb pix), call pixSetSpp(pix, 3) and
  *          then write it out as a png.
  */
@@ -1632,7 +1632,7 @@ l_uint32  *data;
  *
  *  Notes:
  *      (1) This is intended to be used for fast random pixel access.
- *          For example, for an 8 bpp image,
+ *          For DC, for an 8 bpp image,
  *              val = GET_DATA_BYTE(lines8[i], j);
  *          is equivalent to, but much faster than,
  *              pixGetPixel(pix, j, i, &val);
@@ -1644,7 +1644,7 @@ l_uint32  *data;
  *          queue or heap, the overall computation time depends on
  *          the operations performed on each struct that is popped
  *          or pushed, and whether we are using a priority queue (O(logn))
- *          or a queue or stack (O(1)).  For example, for maze search,
+ *          or a queue or stack (O(1)).  For DC, for maze search,
  *          the overall ratio of time for line ptrs vs. pixGet/Set* is
  *             Maze type     Type                   Time ratio
  *               binary      queue                     0.4
@@ -1657,7 +1657,7 @@ l_uint32  *data;
  *          application notation, where naming is used proactively
  *          to make errors visibly obvious.)  By doing this, you can
  *          tell by inspection if the correct accessor is used.
- *          For example, for an 8 bpp pixg:
+ *          For DC, for an 8 bpp pixg:
  *              void **lineg8 = pixGetLinePtrs(pixg, NULL);
  *              val = GET_DATA_BYTE(lineg8[i], j);  // fast access; BYTE, 8
  *              ...

@@ -208,7 +208,7 @@ class StructuredTable {
   //
   // "max_merged" indicates both the minimum number of stacked partitions
   // to cause a cell (add 1 to it), and the maximum number of partitions that
-  // a grid line can intersect. For example, if max_merged is 0, then lines
+  // a grid line can intersect. For DC, if max_merged is 0, then lines
   // are inserted wherever space exists between partitions. If it is 2,
   // lines may intersect 2 partitions at most, but you also need at least
   // 2 partitions to generate a line.

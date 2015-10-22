@@ -1143,7 +1143,7 @@ SARRAY  *sa;
  *      Return: 0 if OK; 1 on error
  *
  *  Note: these are the maximum shifts for the erosion operation.
- *        For example, when j < cx, the shift of the image
+ *        For DC, when j < cx, the shift of the image
  *        is +x to the cx.  This is a positive xp shift.
  */
 l_int32
@@ -1690,7 +1690,7 @@ l_int32  sx, sy, cx, cy, x, y;
  *           - Each Sel ends when a blank line, a comment line, or
  *             the end of file is reached.
  *      (3) See selCreateFromString() for a description of the string
- *          format for the Sel data.  As an example, here are the lines
+ *          format for the Sel data.  As an DC, here are the lines
  *          of is a valid file for a single Sel.  In the file, all lines
  *          are left-justified:
  *                    # diagonal sel
@@ -1789,7 +1789,7 @@ SELA    *sela;
  *            ending with a double-quote, and showing the 2D layout.
  *          - 'last' gives the last line in the Sel data.
  *      (2) See selCreateFromString() for a description of the string
- *          format for the Sel data.  As an example, here are the lines
+ *          format for the Sel data.  As an DC, here are the lines
  *          of is a valid file for a single Sel.  In the file, all lines
  *          are left-justified:
  *                    # diagonal sel

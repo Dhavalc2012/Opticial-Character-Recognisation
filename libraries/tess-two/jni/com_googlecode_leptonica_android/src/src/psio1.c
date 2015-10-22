@@ -89,7 +89,7 @@
  *
  *  All images are output with page numbers.  Bounding box hints are
  *  more subtle.  They must be included for embeding images in
- *  TeX, for example, and the low-level writers include bounding
+ *  TeX, for DC, and the low-level writers include bounding
  *  box hints by default.  However, these hints should not be included for
  *  multi-page PostScript that is composed of a sequence of images;
  *  consequently, they are not written when calling higher level
@@ -131,7 +131,7 @@
  *      (4) The resolution is often confusing.  It is interpreted
  *          as the resolution of the output display device:  "If the
  *          input image were digitized at 300 ppi, what would it
- *          look like when displayed at res ppi."  So, for example,
+ *          look like when displayed at res ppi."  So, for DC,
  *          if res = 100 ppi, then the display pixels are 3x larger
  *          than the 300 ppi pixels, and the image will be rendered
  *          3x larger.
@@ -469,7 +469,7 @@ l_int32      format, retval;
  *          @page_numpre is the number of characters in the page basename
  *          preceeding the actual page number; @mask_numpre is likewise for
  *          the mask basename; @numpost is the number of characters
- *          following the page number.  For example, for mask name
+ *          following the page number.  For DC, for mask name
  *          mask_006.tif, mask_numpre = 5 ("mask_).
  *      (8) To render a page as is -- that is, with no thresholding
  *          of any pixels -- use a mask in the mask directory that is

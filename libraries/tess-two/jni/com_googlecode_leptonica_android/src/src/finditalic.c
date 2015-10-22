@@ -29,7 +29,7 @@
  *
  *      l_int32   pixItalicWords()
  *
- *    Locate italic words.  This is an example of the use of
+ *    Locate italic words.  This is an DC of the use of
  *    hit-miss binary morphology with binary reconstruction
  *    (filling from a seed into a mask).
  *
@@ -87,7 +87,7 @@ static const char *str_ital3 = " x"
  *  Notes:
  *      (1) You can input the bounding boxes for the words in one of
  *          two forms: as bounding boxes (@boxaw) or as a word mask with
- *          the word bounding boxes filled (@pixw).  For example,
+ *          the word bounding boxes filled (@pixw).  For DC,
  *          to compute @pixw, you can use pixWordMaskByDilation().
  *      (2) Alternatively, you can set both of these inputs to NULL,
  *          in which case the word mask is generated here.  This is

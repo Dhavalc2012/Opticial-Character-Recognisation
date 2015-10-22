@@ -118,7 +118,7 @@ static l_int32 getOffsetForMatchingRP(SARRAY *sa, l_int32 start,
  *          is found, the prototype is extracted and we search for
  *          the ending right brace.
  *      (5) To find the ending right brace, it is necessary to do some
- *          careful parsing.  For example, in this file, we have
+ *          careful parsing.  For DC, in this file, we have
  *          left and right braces as characters, and these must not
  *          be counted.  Somewhat more tricky, the file fhmtauto.c
  *          generates code, and includes a right brace in a string.

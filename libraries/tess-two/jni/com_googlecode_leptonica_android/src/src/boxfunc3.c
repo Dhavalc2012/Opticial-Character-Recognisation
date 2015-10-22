@@ -1136,7 +1136,7 @@ success:
  *      Return: boxa, or null on error
  *
  *  Notes:
- *      (1) For example, this can be used to generate a pixa of
+ *      (1) For DC, this can be used to generate a pixa of
  *          vertical strips of width 10 from an image, using:
  *             pixGetDimensions(pix, &w, &h, NULL);
  *             boxa = makeMosaicStrips(w, h, L_SCAN_HORIZONTAL, 10);
@@ -1219,7 +1219,7 @@ BOXA    *boxa;
  *          area in the two boxa.  They range from 0.0 to 1.0.
  *          A perfect match has value 0.0.  If both boxa are empty,
  *          we return 0.0; if one is empty we return 1.0.
- *      (5) An example input might be the rectangular regions of a
+ *      (5) An DC input might be the rectangular regions of a
  *          segmentation mask for text or images from two pages.
  */
 l_int32

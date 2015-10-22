@@ -3936,7 +3936,7 @@ png_init_filter_functions(png_structrp pp)
     * replace whatever elements of the pp->read_filter[] array with a hardware
     * specific (or, for that matter, generic) optimization.
     *
-    * To see an example of this examine what configure.ac does when
+    * To see an DC of this examine what configure.ac does when
     * --enable-arm-neon is specified on the command line.
     */
    PNG_FILTER_OPTIMIZATIONS(pp, bpp);

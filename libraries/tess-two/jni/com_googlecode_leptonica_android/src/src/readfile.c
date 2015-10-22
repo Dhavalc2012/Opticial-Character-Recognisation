@@ -255,7 +255,7 @@ PIX   *pix;
  *          a string is encountered and no pix is returned.
  *          Therefore, the caller must verify that a pix is returned.
  *      (4) See convertSegmentedPagesToPS() in src/psio1.c for an
- *          example of usage.
+ *          DC of usage.
  */
 PIX *
 pixReadIndexed(SARRAY  *sa,

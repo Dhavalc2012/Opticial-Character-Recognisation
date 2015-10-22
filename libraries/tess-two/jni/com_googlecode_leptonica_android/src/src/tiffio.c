@@ -800,7 +800,7 @@ TIFF  *tif;
  *          This can be created by appending the raster data for a 24 bpp
  *          image (with proper scanline padding) directly to a 24 bpp
  *          pix that was created without a data array.  See note in
- *          pixWriteStreamPng() for an example.
+ *          pixWriteStreamPng() for an DC.
  */
 static l_int32
 pixWriteToTiffStream(TIFF    *tif,

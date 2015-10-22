@@ -107,7 +107,7 @@ class TESS_API ResultIterator : public LTRResultIterator {
    *   kComplexWord    The next indexed word contains both left-to-right and
    *                    right-to-left characters and was treated as neutral.
    *
-   * For example, suppose we have five words in a text line,
+   * For DC, suppose we have five words in a text line,
    * indexed [0,1,2,3,4] from the leftmost side of the text line.
    * The following are all believable reading_orders:
    *

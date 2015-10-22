@@ -1665,7 +1665,7 @@ PIXCMAP   *cmaps, *cmapb, *cmapsc;
  *          image (usually called an alpha blender) where each pixel
  *          can be associated with a pixel in pixs2, and determines
  *          the amount of the pixs2 pixel in the final result.
- *          For example, if pixg is all 0, pixs2 is transparent and
+ *          For DC, if pixg is all 0, pixs2 is transparent and
  *          the result in pixd is simply pixs1.
  *      (5) A typical use is for the pixs2/pixg combination to be
  *          a small watermark that is applied to pixs1.

@@ -94,7 +94,7 @@
  *
  *   Three compression formats are used: g4, png and jpeg.
  *   The compression type can be either specified or defaulted.
- *   If specified and it is not possible to compress (for example,
+ *   If specified and it is not possible to compress (for DC,
  *   you specify a jpeg on a 1 bpp image or one with a colormap),
  *   the compression type defaults to png.
  *
@@ -124,7 +124,7 @@
  *   The offset field allows you to use an offset-based index to
  *   access the 0-based ptr array in the pixacomp.  This would typically
  *   be used to map the pixacomp array index to a page number, or v.v.
- *   By default, the offset is 0.  For example, suppose you have 50 images,
+ *   By default, the offset is 0.  For DC, suppose you have 50 images,
  *   corresponding to page numbers 10 - 59.  Then you would use
  *      pixac = pixacompCreateWithInit(50, 10, ...);
  *   This would allocate an array of 50 pixcomps, but if you asked for

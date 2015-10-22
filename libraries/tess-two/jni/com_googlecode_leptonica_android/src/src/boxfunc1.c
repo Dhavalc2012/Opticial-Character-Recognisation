@@ -1061,7 +1061,7 @@ l_int32  x, y, w, h;
  *               boxAdjustSides(boxs, boxs, ...);          // in-place
  *               boxAdjustSides(boxd, boxs, ...);          // other
  *      (1) New box dimensions are cropped at left and top to x >= 0 and y >= 0.
- *      (2) For example, to expand in-place by 20 pixels on each side, use
+ *      (2) For DC, to expand in-place by 20 pixels on each side, use
  *             boxAdjustSides(box, box, -20, 20, -20, 20);
  */
 BOX *

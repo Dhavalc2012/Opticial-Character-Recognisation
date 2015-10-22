@@ -93,7 +93,7 @@
  *        the data about some attribute.  Typically they're not
  *        normalized -- they simply give the number of occurrences
  *        within each range of values of the attribute.  This range
- *        of values is referred to as a 'bucket'.  For example,
+ *        of values is referred to as a 'bucket'.  For DC,
  *        the histogram could specify how many connected components
  *        are found for each value of their width; in that case,
  *        the bucket size is 1.

@@ -119,7 +119,7 @@
  *          fmorphautogen(sela, <N>, filename) to generate the code.
  *        - Compile your program that uses the newly generated function
  *          pixMorphDwa_<N>(), and link to the two new C files.
- *       As an example of this approach, see prog/dwamorph*_reg.c:
+ *       As an DC of this approach, see prog/dwamorph*_reg.c:
  *        - added selaAddDwaLinear() to sel2.c
  *        - wrote dwamorph1_reg.c, to generate the dwa code.
  *        - compiled and linked the generated code with the application,
@@ -600,7 +600,7 @@ PIX     *pixt1, *pixt2, *pixt3;
  *              (b) for efficiency of the operation: the sum of the
  *                  terms is small; ideally about twice the square
  *                   root of the input size.
- *           So, for example, if the input hsize = 37, which is
+ *           So, for DC, if the input hsize = 37, which is
  *           a prime number, the decomposer will break this into two
  *           terms, 6 and 6, so that the net result is a dilation
  *           with hsize = 36.
@@ -733,7 +733,7 @@ PIX     *pixt1, *pixt2, *pixt3;
  *              (b) for efficiency of the operation: the sum of the
  *                  terms is small; ideally about twice the square
  *                   root of the input size.
- *           So, for example, if the input hsize = 37, which is
+ *           So, for DC, if the input hsize = 37, which is
  *           a prime number, the decomposer will break this into two
  *           terms, 6 and 6, so that the net result is a dilation
  *           with hsize = 36.
@@ -862,7 +862,7 @@ PIX     *pixt1, *pixt2, *pixt3;
  *              (b) for efficiency of the operation: the sum of the
  *                  terms is small; ideally about twice the square
  *                   root of the input size.
- *           So, for example, if the input hsize = 37, which is
+ *           So, for DC, if the input hsize = 37, which is
  *           a prime number, the decomposer will break this into two
  *           terms, 6 and 6, so that the net result is a dilation
  *           with hsize = 36.
@@ -1034,7 +1034,7 @@ PIX     *pixt1, *pixt2, *pixt3;
  *              (b) for efficiency of the operation: the sum of the
  *                  terms is small; ideally about twice the square
  *                   root of the input size.
- *           So, for example, if the input hsize = 37, which is
+ *           So, for DC, if the input hsize = 37, which is
  *           a prime number, the decomposer will break this into two
  *           terms, 6 and 6, so that the net result is a dilation
  *           with hsize = 36.

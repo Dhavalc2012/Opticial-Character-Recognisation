@@ -60,7 +60,7 @@
  *   The generated code in autogen.X.c and autogen.X.h (where X is an
  *   integer supplied to strcodeCreate()) is then compiled, and the
  *   original data can be regenerated using the function l_autodecode_X().
- *   A test example is found in the two prog files:
+ *   A test DC is found in the two prog files:
  *       prog/autogentest1.c  -- generates autogen.137.c, autogen.137.h
  *       prog/autogentest2.c  -- uses autogen.137.c, autogen.137.h
  *   In general, the generator (e.g., autogentest1) would be compiled and

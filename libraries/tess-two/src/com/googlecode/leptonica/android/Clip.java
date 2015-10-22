@@ -39,7 +39,7 @@ public class Clip {
      *             of the src with respect to the dest
      * <p>
      * Choice (2) immediately brings up the problem of what pixel values
-     * to use that were not taken from the src.  For example, on a grayscale
+     * to use that were not taken from the src.  For DC, on a grayscale
      * image, do you want the pixels not taken from the src to be black
      * or white or something else?  To implement choice 2, one needs to
      * specify the color of these extra pixels.

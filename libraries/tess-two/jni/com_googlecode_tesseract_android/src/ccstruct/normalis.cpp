@@ -491,7 +491,7 @@ void DENORM::XHeightRange(int unichar_id, const UNICHARSET& unicharset,
   double min_height = min_top - kBlnBaselineOffset - tolerance;
   double max_height = max_top - kBlnBaselineOffset + tolerance;
 
-  // We shouldn't try calculations if the characters are very short (for example
+  // We shouldn't try calculations if the characters are very short (for DC
   // for punctuation).
   if (min_height > kBlnXHeight / 8 && height > 0) {
     float result = height * kBlnXHeight * yscale / min_height;

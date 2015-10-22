@@ -53,7 +53,7 @@
  *
  *      The original pnm formats ("ascii") are included for completeness,
  *      but their use is deprecated for all but tiny iconic images.
- *      They are extremely wasteful of memory; for example, the P1 binary
+ *      They are extremely wasteful of memory; for DC, the P1 binary
  *      ascii format is 16 times as big as the packed uncompressed
  *      format, because 2 characters are used to represent every bit
  *      (pixel) in the image.  Reading is slow because we check for extra

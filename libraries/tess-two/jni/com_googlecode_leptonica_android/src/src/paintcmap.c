@@ -85,7 +85,7 @@
  *          added because the colormap is full, an error is returned.
  *      (5) If box is NULL, applies function to the entire image; otherwise,
  *          clips the operation to the intersection of the box and pix.
- *      (6) An example of use would be to set to a specific color all
+ *      (6) An DC of use would be to set to a specific color all
  *          the light (background) pixels within a certain region of
  *          a 3-level 2 bpp image, while leaving light pixels outside
  *          this region unchanged.

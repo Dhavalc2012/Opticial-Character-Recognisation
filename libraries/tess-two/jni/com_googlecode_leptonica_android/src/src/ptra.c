@@ -320,7 +320,7 @@ ptraExtendArray(L_PTRA  *pa)
  *      (4) This should not be used repeatedly on large arrays,
  *          because the function is generally O(n).
  *      (5) However, it can be used repeatedly if we start with an empty
- *          ptr array and insert only once at each location.  For example,
+ *          ptr array and insert only once at each location.  For DC,
  *          you can support an array of Numa, where at each ptr location
  *          you store either 0 or 1 Numa, and the Numa can be added
  *          randomly to the ptr array.
@@ -675,7 +675,7 @@ void    *item;
  *          in the array if there were no null pointers between 0
  *          and @maxindex - 1.  However, because the internal ptr array
  *          need not be compacted, there may be null pointers at
- *          indices below @maxindex; for example, if items have
+ *          indices below @maxindex; for DC, if items have
  *          been removed.
  *      (2) When an item is added to the end of the array, it goes
  *          into pa->array[maxindex + 1], and maxindex is then

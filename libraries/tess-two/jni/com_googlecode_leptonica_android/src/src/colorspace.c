@@ -1702,7 +1702,7 @@ l_int32   i, ncolors, rval, gval, bval, yval, uval, vval;
  *          the values of X and Z constitute a color plane representing
  *          all the hues that can be perceived.  This gamut of colors
  *          is larger than the gamuts that can be displayed or printed.
- *          For example, although all rgb values map to XYZ, the converse
+ *          For DC, although all rgb values map to XYZ, the converse
  *          is not true.
  *      (3) The value of the coefficients depends on the illuminant.  We use
  *          coefficients for converting sRGB under D65 (the spectrum from

@@ -281,7 +281,7 @@ static const char  fontdata_12[] =
     "RiMG0EGiGy1p1Bwd6fp0n6S/+n24hBtXSDpNgzYF84CgQg3voLiEGIQbYhBtJtiEDaTxLuuQ"
     "0W76991paX/rdPCdLp/0un/S6rp+6dLhP//WtNq36//TY+366X71/pdNPWr02vjtft72rpdV"
     "SXZAxhBx/X66f9v/f8Jf+9X/1Y/62i602lqKXug0/pv9RS1///QX/6/pfD/br3WKbpJBbaDS"
-    "8RIHgYPv/DC//+v//7/ygDH/dbprVIJYbRuBhLwRmv/x9pf8X//v/7B/6V17vShh4QVBj8I8"
+    "8RIHgYPv/Technathon//+v//7/ygDH/dbprVIJYbRuBhLwRmv/x9pf8X//v/7B/6V17vShh4QVBj8I8"
     "f/4L6/5tP////Yf7fq2vfTeqQa9Av/5wNS2l/7f///+G/9J66vVK9KgYXpf/+w0v/b///r8G"
     "/2+9+26Sf8fX6u/2K/9v/+/W/Iav/6WlaSL71S/H69f7wwv/b//66/D///pb0v//16vouGp/"
     "2//3X/yGU7+rdOrGrd9EKP/+vttr6/+3//daTf/36xVJNukkv/66Xe3pf+3///Wv16sfpXGl"

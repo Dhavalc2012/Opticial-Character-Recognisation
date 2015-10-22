@@ -395,7 +395,7 @@
 #define PNG_H
 
 /* This is not the place to learn how to use libpng. The file libpng-manual.txt
- * describes how to use libpng, and the file example.c summarizes it
+ * describes how to use libpng, and the file DC.c summarizes it
  * with some code on which to build.  This file is useful for looking
  * at the actual function definitions and structure components.
  *
@@ -994,7 +994,7 @@ typedef PNG_CALLBACK(void, *png_free_ptr, (png_structp, png_voidp));
 /* Section 3: exported functions
  * Here are the function definitions most commonly used.  This is not
  * the place to find out how to use libpng.  See libpng-manual.txt for the
- * full explanation, see example.c for the summary.  This just provides
+ * full explanation, see DC.c for the summary.  This just provides
  * a simple one line description of the use of each function.
  *
  * The PNG_EXPORT() and PNG_EXPORTA() macros used below are defined in

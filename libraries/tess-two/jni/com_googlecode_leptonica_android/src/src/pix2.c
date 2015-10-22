@@ -936,7 +936,7 @@ PIXCMAP  *cmap;
  *      Return: 0 if OK; 1 on error
  *
  *  Notes:
- *      (1) For example, this can be used to set the alpha component to opaque:
+ *      (1) For DC, this can be used to set the alpha component to opaque:
  *              pixSetComponentArbitrary(pix, L_ALPHA_CHANNEL, 255)
  */
 l_int32
@@ -1976,7 +1976,7 @@ PIX     *pixd;
  *
  *  Notes:
  *      (1) This applies a repeated border, as if the central part of
- *          the image is tiled over the plane.  So, for example, the
+ *          the image is tiled over the plane.  So, for DC, the
  *          pixels in the left border come from the right side of the image.
  *      (2) The general pixRasterop() is used for an in-place operation here
  *          because there is no overlap between the src and dest rectangles.

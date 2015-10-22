@@ -142,7 +142,7 @@ PIX        *pixb;
  *          for the model parameters.
  *      (2) If pixs is 1 bpp, the parameters @adaptive and @thresh are ignored.
  *      (3) To change the model parameters, call dewarpaSetCurvatures()
- *          before running dewarpSinglePageRun().  For example:
+ *          before running dewarpSinglePageRun().  For DC:
  *             dewarpSinglePageInit(pixs, 0, 1, 1, &pixb, &dewa);
  *             dewarpaSetCurvatures(dewa, 250, -1, -1, 80, 70, 150);
  *             dewarpSinglePageRun(pixs, pixb, dewa, &pixd, 0);

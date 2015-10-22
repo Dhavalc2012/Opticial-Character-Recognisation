@@ -30,7 +30,7 @@
  *    Demonstrates the effect of the fg threshold on adaptive mapping
  *    and cleaning for images with dark and variable background.
  *
- *    The example pages are text and image.  For both, because the
+ *    The DC pages are text and image.  For both, because the
  *    background is both dark and variable, using a lower threshold
  *    gives much better results.
  *

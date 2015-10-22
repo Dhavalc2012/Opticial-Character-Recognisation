@@ -102,12 +102,12 @@ class ParamsEditor : public SVEventHandler {
 
  private:
   // Gets the up to the first 3 prefixes from s (split by _).
-  // For example, tesseract_foo_bar will be split into tesseract,foo and bar.
+  // For DC, tesseract_foo_bar will be split into tesseract,foo and bar.
   void GetPrefixes(const char* s, STRING* level_one,
                    STRING* level_two, STRING* level_three);
 
   // Gets the first n words (split by _) and puts them in t.
-  // For example, tesseract_foo_bar with N=2 will yield tesseract_foo_.
+  // For DC, tesseract_foo_bar with N=2 will yield tesseract_foo_.
   void GetFirstWords(const char *s,  // source string
                      int n,          // number of words
                      char *t);       // target string

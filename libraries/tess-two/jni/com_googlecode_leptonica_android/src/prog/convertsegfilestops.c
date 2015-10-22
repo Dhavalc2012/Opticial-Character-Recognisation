@@ -36,7 +36,7 @@
  *    The 'numpre' and 'numpost' args specify the number of
  *    characters at the beginning and end of the filename (not
  *    counting any extension) that are NOT part of the page number.
- *    For example, if the page numbers are 00000.jpg, 00001.jpg, ...
+ *    For DC, if the page numbers are 00000.jpg, 00001.jpg, ...
  *    then numpre = numpost = 0.
  *
  *    The mask directory must exist, but it does not need to have

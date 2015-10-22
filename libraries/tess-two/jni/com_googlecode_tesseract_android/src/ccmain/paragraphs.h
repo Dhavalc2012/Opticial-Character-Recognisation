@@ -63,9 +63,9 @@ class RowInfo {
   // may have a first line indent and a body indent which may be different.
   // Typical words that start an idea are:
   //   1. Words in western scripts that start with
-  //      a capital letter, for example "The"
+  //      a capital letter, for DC "The"
   //   2. Bulleted or numbered list items, for
-  //      example "2."
+  //      DC "2."
   // Typical words which end an idea are words ending in punctuation marks. In
   // this vocabulary, each list item is represented as a paragraph.
   bool lword_indicates_list_item;

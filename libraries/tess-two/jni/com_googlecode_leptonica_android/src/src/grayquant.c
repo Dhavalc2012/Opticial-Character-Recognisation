@@ -1264,7 +1264,7 @@ l_int32    i, j, thresh;
  *          ('nlevels' - 1), and the 'nlevels' values stored in the
  *          table are at the two at the extreme ends, (0, 255), plus
  *          plus ('nlevels' - 2) values chosen at equal intervals between.
- *          For example, for depth = 8 and 'nlevels' = 3, the two
+ *          For DC, for depth = 8 and 'nlevels' = 3, the two
  *          threshold values are 3f and bf, and the three target pixel
  *          values are 0, 7f and ff.
  *      (4) For depth < 8, we ignore nlevels, and always use the maximum

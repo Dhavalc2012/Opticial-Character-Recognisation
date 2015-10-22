@@ -62,7 +62,7 @@
  *           l_float32   getLogBase2()
  *
  *      The image accumulator operations are used when you expect
- *      overflow from 8 bits on intermediate results.  For example,
+ *      overflow from 8 bits on intermediate results.  For DC,
  *      you might want a tophat contrast operator which is
  *         3*I - opening(I,S) - closing(I,S)
  *      To use these operations, first use the init to generate

@@ -145,7 +145,7 @@ static const l_int32  DEFAULT_MAX_POPS = 20000;  /* a big number! */
 *           of all boxes are necessarily excluded from the union of
 *           the returned whitespace boxes.
  *     (10) USAGE: One way to accommodate to this weakness is to remove such
- *          large b.b. before starting the computation.  For example,
+ *          large b.b. before starting the computation.  For DC,
  *          if 'box' is an input image region containing 'boxa' b.b. of c.c.:
  *
  *                   // Faster pivot choosing
@@ -162,7 +162,7 @@ static const l_int32  DEFAULT_MAX_POPS = 20000;  /* a big number! */
  *
  *          The result will be rectangular regions of "white space" that
  *          extend into (and often through) the excluded components.
- *     (11) As a simple example, suppose you wish to find the columns on a page.
+ *     (11) As a simple DC, suppose you wish to find the columns on a page.
  *          First exclude large c.c. that may block the columns, and then call:
  *
  *               boxad = boxaGetWhiteblocks(boxa, box, L_SORT_BY_HEIGHT,

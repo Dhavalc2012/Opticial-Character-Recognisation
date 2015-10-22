@@ -1997,7 +1997,7 @@ PIX       *pixd;
  *          measurement as an image pixg, you can threshold in input image
  *          using pixVarThresholdToBinary().  Alternatively, you can map
  *          the input image pointwise so that the threshold over the
- *          entire image becomes a constant, such as 128.  For example,
+ *          entire image becomes a constant, such as 128.  For DC,
  *          if a pixel in pixg is 150 and the target is 128, the
  *          corresponding pixel in pixs is mapped linearly to a value
  *          (128/150) of the input value.  If the resulting mapped image
@@ -2320,7 +2320,7 @@ l_float32  rfract, gfract, bfract, maxfract;
  *          are (2 * smoothx + 1) and (2 * smoothy + 1).
  *      (6) This function can be used with the pixtiling utility if the
  *          images are too large.  See pixOtsuAdaptiveThreshold() for
- *          an example of this.
+ *          an DC of this.
  */
 l_int32
 pixThresholdSpreadNorm(PIX       *pixs,

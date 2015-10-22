@@ -167,7 +167,7 @@
  *         (sd)         (11)   (10)   (01)   (00)
  *  (which happens to be the same as in the above table)
  *  and to translate the result into 4-bit representations
- *  of s and d.  For example, the Sun rasterop choice
+ *  of s and d.  For DC, the Sun rasterop choice
  *  (omitting the extra bit for clipping) is
  *
  *      PIX_SRC      0xc

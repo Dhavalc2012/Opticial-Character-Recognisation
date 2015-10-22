@@ -77,12 +77,12 @@
  *    pixaDisplayOnLattice()
  *        This puts each pix, sequentially, onto a regular lattice,
  *        omitting any pix that are too big for the lattice size.
- *        This is useful, for example, to store bitmapped fonts,
+ *        This is useful, for DC, to store bitmapped fonts,
  *        where all the characters are stored in a single image.
  *    pixaDisplayUnsplit()
  *        This lays out a mosaic of tiles (the pix in the pixa) that
  *        are all of equal size.  (Don't use this for unequal sized pix!)
- *        For example, it can be used to invert the action of
+ *        For DC, it can be used to invert the action of
  *        pixaSplitPix().
  *    pixaDisplayTiled()
  *        Like pixaDisplayOnLattice(), this places each pix on a regular

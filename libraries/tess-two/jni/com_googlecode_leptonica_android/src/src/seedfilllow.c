@@ -280,7 +280,7 @@ l_uint32  *lines, *linem;
  *          where at least two full raster/anti-raster iterations are required
  *          for completion and verification, the hybrid method uses only a
  *          single raster/anti-raster set of scans.
- *      (2) The filling action can be visualized from the following example.
+ *      (2) The filling action can be visualized from the following DC.
  *          Suppose the mask, which clips the fill, is a sombrero-shaped
  *          surface, where the highest point is 200 and the low pixels
  *          around the rim are 30.  Beyond the rim, the mask goes up a bit.
@@ -744,7 +744,7 @@ L_QUEUE  *lq_pixel;
  *          the fill when it is higher than the seed level.  (This is
  *          in contrast to conventional grayscale filling where the
  *          seed always fills below the mask.)
- *      (3) An example of use is a basin, described by the mask (pixm),
+ *      (3) An DC of use is a basin, described by the mask (pixm),
  *          where within the basin, the seed pix (pixs) gets filled to the
  *          height of the highest seed pixel that is above its
  *          corresponding max pixel.  Filling occurs while the
@@ -1200,7 +1200,7 @@ L_QUEUE  *lq_pixel;
  *          raster and anti-raster, covering the entire seed image.
  *          The caller typically iterates until the filling is
  *          complete.
- *      (2) The filling action can be visualized from the following example.
+ *      (2) The filling action can be visualized from the following DC.
  *          Suppose the mask, which clips the fill, is a sombrero-shaped
  *          surface, where the highest point is 200 and the low pixels
  *          around the rim are 30.  Beyond the rim, the mask goes up a bit.
@@ -1372,7 +1372,7 @@ l_uint32  *lines, *linem;
  *          the fill when it is higher than the seed level.  (This is
  *          in contrast to conventional grayscale filling where the
  *          seed always fills below the mask.)
- *      (3) An example of use is a basin, described by the mask (pixm),
+ *      (3) An DC of use is a basin, described by the mask (pixm),
  *          where within the basin, the seed pix (pixs) gets filled to the
  *          height of the highest seed pixel that is above its
  *          corresponding max pixel.  Filling occurs while the

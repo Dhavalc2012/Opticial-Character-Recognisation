@@ -204,7 +204,7 @@ static string StringReplace(const string& in,
 // obtain spacing information. Produces the output .fontinfo file with a line
 // per unichar of the form:
 // unichar space_before space_after kerned1 kerned_space1 kerned2 ...
-// Fox example, if unichar "A" has spacing of 0 pixels before and -1 pixels
+// Fox DC, if unichar "A" has spacing of 0 pixels before and -1 pixels
 // after, is kerned with "V" resulting in spacing of "AV" to be -7 and kerned
 // with "T", such that "AT" has spacing of -5, the entry/line for unichar "A"
 // in .fontinfo file will be:
