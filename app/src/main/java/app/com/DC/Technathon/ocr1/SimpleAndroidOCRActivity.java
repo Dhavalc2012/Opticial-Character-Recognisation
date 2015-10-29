@@ -15,6 +15,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import com.googlecode.tesseract.android.TessBaseAPI;
 
@@ -37,10 +38,12 @@ public class SimpleAndroidOCRActivity extends Activity {
     private static final String TAG = "SimpleAndroidOCR.java";
 
     protected Button _button;
+    protected Button _sharebtn;
     // protected ImageView _image;
     protected EditText _field;
     protected String _path;
     protected boolean _taken;
+    public String recognizedText="abcd";
 
     protected static final String PHOTO_TAKEN = "photo_taken";
 
@@ -100,17 +103,40 @@ public class SimpleAndroidOCRActivity extends Activity {
         _field = (EditText) findViewById(R.id.field);
         _button = (Button) findViewById(R.id.button);
         _button.setOnClickListener(new ButtonClickHandler());
-
+        _sharebtn = (Button) findViewById(R.id.sharebtn);
+        _sharebtn.setOnClickListener(new ButtonClickHandler());
         _path = DATA_PATH + "/ocr.jpg";
+
+
     }
 
     public class ButtonClickHandler implements View.OnClickListener {
-        public void onClick(View view) {
-            Log.v(TAG, "Starting Camera app");
-            startCameraActivity();
+        public void onClick(View v) {
+            switch(v.getId())
+            {
+                case R.id.button: Log.v(TAG, "Starting Camera app");
+                startCameraActivity();
+                    break;
+                case R.id.sharebtn:
+                    if (recognizedText=="abcd")
+                        Toast.makeText(getApplicationContext(),"No content to share", Toast.LENGTH_LONG).show();
+                    else if (recognizedText.length() != 0) {
+                        Intent sendIntent = new Intent();
+
+                        sendIntent.setAction(Intent.ACTION_SEND);
+                        sendIntent.putExtra(Intent.EXTRA_TEXT, recognizedText + "\n-Shared using Text IT");
+                        sendIntent.setType("text/plain");
+                        startActivity(Intent.createChooser(sendIntent, getResources().getText(R.string.send_to)));
+                    }
+
+                    break;
+
+            }
         }
     }
-
+   
+       
+    
     // Simple android photo capture:
     // http://labs.makemachine.net/2010/03/simple-android-photo-capture/
 
@@ -211,7 +237,7 @@ public class SimpleAndroidOCRActivity extends Activity {
         baseApi.init(DATA_PATH, lang);
         baseApi.setImage(bitmap);
 
-        String recognizedText = baseApi.getUTF8Text();
+        recognizedText = baseApi.getUTF8Text();
 
         baseApi.end();
 
