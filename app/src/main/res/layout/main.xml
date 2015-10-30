@@ -9,6 +9,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/button_text" />
+    <Button
+        android:id="@+id/sharebtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/sharebtn_text" />
 
     <EditText
         android:id="@+id/field"

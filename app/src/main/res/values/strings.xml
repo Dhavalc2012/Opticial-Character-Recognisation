@@ -3,7 +3,9 @@
 
     <string name="hello">Hello World, DatumDroidOCRActivity!</string>
     <string name="app_name">Text It !</string>
-    <string name="button_text">OCR!</string>
+    <string name="button_text">OPEN CAMERA!</string>
     <string name="text_hint">OCRed Text will appear here</string>
+    <string name="sharebtn_text">SHARE</string>
+    <string name="send_to">SEND TO</string>
 
 </resources>
