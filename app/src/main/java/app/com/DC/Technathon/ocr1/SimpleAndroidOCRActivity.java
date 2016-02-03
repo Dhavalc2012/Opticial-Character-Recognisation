@@ -5,7 +5,12 @@ import android.content.Intent;
 import android.content.res.AssetManager;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.graphics.Canvas;
+import android.graphics.Color;
+import android.graphics.ColorMatrix;
+import android.graphics.ColorMatrixColorFilter;
 import android.graphics.Matrix;
+import android.graphics.Paint;
 import android.media.ExifInterface;
 import android.net.Uri;
 import android.os.Bundle;
@@ -39,18 +44,19 @@ public class SimpleAndroidOCRActivity extends Activity {
 
     protected Button _button;
     protected Button _sharebtn;
+    protected Button _gallerybtn;
     // protected ImageView _image;
     protected EditText _field;
     protected String _path;
     protected boolean _taken;
-    public String recognizedText="abcd";
+    public String recognizedText = "abcd";
 
     protected static final String PHOTO_TAKEN = "photo_taken";
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
 
-        String[] paths = new String[] { DATA_PATH, DATA_PATH + "tessdata/" };
+        String[] paths = new String[]{DATA_PATH, DATA_PATH + "tessdata/"};
 
         for (String path : paths) {
             File dir = new File(path);
@@ -105,6 +111,8 @@ public class SimpleAndroidOCRActivity extends Activity {
         _button.setOnClickListener(new ButtonClickHandler());
         _sharebtn = (Button) findViewById(R.id.sharebtn);
         _sharebtn.setOnClickListener(new ButtonClickHandler());
+        _gallerybtn = (Button) findViewById(R.id.gallerybtn);
+        _gallerybtn.setOnClickListener(new ButtonClickHandler());
         _path = DATA_PATH + "/ocr.jpg";
 
 
@@ -112,14 +120,17 @@ public class SimpleAndroidOCRActivity extends Activity {
 
     public class ButtonClickHandler implements View.OnClickListener {
         public void onClick(View v) {
-            switch(v.getId())
-            {
-                case R.id.button: Log.v(TAG, "Starting Camera app");
-                startCameraActivity();
+            switch (v.getId()) {
+                case R.id.button:
+                    Log.v(TAG, "Starting Camera app");
+                    startCameraActivity();
+                    break;
+                case R.id.gallerybtn:
+                    openGallery();
                     break;
                 case R.id.sharebtn:
-                    if (recognizedText=="abcd")
-                        Toast.makeText(getApplicationContext(),"No content to share", Toast.LENGTH_LONG).show();
+                    if (recognizedText == "abcd")
+                        Toast.makeText(getApplicationContext(), "No content to share", Toast.LENGTH_LONG).show();
                     else if (recognizedText.length() != 0) {
                         Intent sendIntent = new Intent();
 
@@ -133,10 +144,11 @@ public class SimpleAndroidOCRActivity extends Activity {
 
             }
         }
+
+
     }
-   
-       
-    
+
+
     // Simple android photo capture:
     // http://labs.makemachine.net/2010/03/simple-android-photo-capture/
 
@@ -153,12 +165,30 @@ public class SimpleAndroidOCRActivity extends Activity {
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
 
-        Log.i(TAG, "resultCode: " + resultCode);
+        switch (requestCode) {
+            case 0:
+                Log.i(TAG, "resultCode: " + resultCode);
 
-        if (resultCode == -1) {
-            onPhotoTaken();
-        } else {
-            Log.v(TAG, "User cancelled");
+                if (resultCode == -1) {
+                    onPhotoTaken();
+                } else {
+                    Log.v(TAG, "User cancelled");
+                }
+                break;
+            case 99:
+                if (requestCode == 99 && resultCode == RESULT_OK && data != null && data.getData() != null) {
+
+                    Uri uri = data.getData();
+
+                    try {
+                        Bitmap bitmap = MediaStore.Images.Media.getBitmap(getContentResolver(), uri);
+                        extractText(bitmap);
+
+
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+                }
         }
     }
 
@@ -174,6 +204,7 @@ public class SimpleAndroidOCRActivity extends Activity {
             onPhotoTaken();
         }
     }
+
 
     protected void onPhotoTaken() {
         _taken = true;
@@ -228,8 +259,18 @@ public class SimpleAndroidOCRActivity extends Activity {
             Log.e(TAG, "Couldn't correct orientation: " + e.toString());
         }
 
+
         // _image.setImageBitmap( bitmap );
 
+        extractText(bitmap);
+
+        // Cycle done.
+    }
+
+    public void extractText(Bitmap bitmap) {
+
+        // bitmap = toGrayscale(bitmap);
+        bitmap = createContrast(bitmap, 100);
         Log.v(TAG, "Before baseApi");
 
         TessBaseAPI baseApi = new TessBaseAPI();
@@ -247,20 +288,131 @@ public class SimpleAndroidOCRActivity extends Activity {
 
         Log.v(TAG, "OCRED TEXT: " + recognizedText);
 
-        if ( lang.equalsIgnoreCase("eng") ) {
+        if (lang.equalsIgnoreCase("eng")) {
             recognizedText = recognizedText.replaceAll("[^a-zA-Z0-9]+", " ");
         }
 
         recognizedText = recognizedText.trim();
 
-        if ( recognizedText.length() != 0 ) {
+        if (recognizedText.length() != 0) {
             _field.setText(_field.getText().toString().length() == 0 ? recognizedText : _field.getText() + " " + recognizedText);
             _field.setSelection(_field.getText().toString().length());
         }
-
-        // Cycle done.
     }
 
+    protected void openGallery() {
+        Intent intent = new Intent();
+// Show only images, no videos or anything else
+        intent.setType("image/*");
+        intent.setAction(Intent.ACTION_GET_CONTENT);
+// Always show the chooser (if there are multiple options available)
+        startActivityForResult(Intent.createChooser(intent, "Select Picture"), 99);
 
-    // Thanks for reading!
+    }
+
+    public static Bitmap toGrayscale(Bitmap bmpOriginal) {
+        int width, height;
+        height = bmpOriginal.getHeight();
+        width = bmpOriginal.getWidth();
+
+        Bitmap bmpGrayscale = Bitmap.createBitmap(width, height, bmpOriginal.getConfig());
+        Canvas c = new Canvas(bmpGrayscale);
+        Paint paint = new Paint();
+        ColorMatrix cm = new ColorMatrix();
+        cm.setSaturation(0);
+        ColorMatrixColorFilter f = new ColorMatrixColorFilter(cm);
+        paint.setColorFilter(f);
+        c.drawBitmap(bmpOriginal, 0, 0, paint);
+        return bmpGrayscale;
+    }
+
+    /*
+    public static Bitmap doGreyscale(Bitmap src) {
+        // constant factors
+        final double GS_RED = 0.299;
+        final double GS_GREEN = 0.587;
+        final double GS_BLUE = 0.114;
+
+        // create output bitmap
+        Bitmap bmOut = Bitmap.createBitmap(src.getWidth(), src.getHeight(), src.getConfig());
+        // pixel information
+        int A, R, G, B;
+        int pixel;
+
+        // get image size
+        int width = src.getWidth();
+        int height = src.getHeight();
+
+        // scan through every single pixel
+        for(int x = 0; x < width; ++x) {
+            for(int y = 0; y < height; ++y) {
+                // get one pixel color
+                pixel = src.getPixel(x, y);
+                // retrieve color of all channels
+                A = Color.alpha(pixel);
+                R = Color.red(pixel);
+                G = Color.green(pixel);
+                B = Color.blue(pixel);
+                // take conversion up to one single value
+                R = G = B = (int)(GS_RED * R + GS_GREEN * G + GS_BLUE * B);
+                // set new pixel color to output bitmap
+                bmOut.setPixel(x, y, Color.argb(A, R, G, B));
+            }
+        }
+
+        // return final image
+        return bmOut;
+    }*/
+    public static Bitmap createContrast(Bitmap src, double value) {
+        // image size
+        int width = src.getWidth();
+        int height = src.getHeight();
+        // create output bitmap
+        Bitmap bmOut = Bitmap.createBitmap(width, height, src.getConfig());
+        // color information
+        int A, R, G, B;
+        int pixel;
+        // get contrast value
+        double contrast = Math.pow((100 + value) / 100, 2);
+
+        // scan through all pixels
+        for (int x = 0; x < width; ++x) {
+            for (int y = 0; y < height; ++y) {
+                // get pixel color
+                pixel = src.getPixel(x, y);
+                A = Color.alpha(pixel);
+                // apply filter contrast for every channel R, G, B
+                R = Color.red(pixel);
+                R = (int) (((((R / 255.0) - 0.5) * contrast) + 0.5) * 255.0);
+                if (R < 0) {
+                    R = 0;
+                } else if (R > 255) {
+                    R = 255;
+                }
+
+                G = Color.red(pixel);
+                G = (int) (((((G / 255.0) - 0.5) * contrast) + 0.5) * 255.0);
+                if (G < 0) {
+                    G = 0;
+                } else if (G > 255) {
+                    G = 255;
+                }
+
+                B = Color.red(pixel);
+                B = (int) (((((B / 255.0) - 0.5) * contrast) + 0.5) * 255.0);
+                if (B < 0) {
+                    B = 0;
+                } else if (B > 255) {
+                    B = 255;
+                }
+
+                // set new pixel color to output bitmap
+                bmOut.setPixel(x, y, Color.argb(A, R, G, B));
+            }
+        }
+
+        // return final image
+        return bmOut;
+    }
+
 }
