@@ -7,5 +7,6 @@
     <string name="text_hint">OCRed Text will appear here</string>
     <string name="sharebtn_text">SHARE</string>
     <string name="send_to">SEND TO</string>
+    <string name="gallerybtn">Open Gallery</string>
 
 </resources>
